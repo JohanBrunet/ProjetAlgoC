@@ -1,6 +1,7 @@
 #ifndef BATEAU_H_INCLUDED
 #define BATEAU_H_INCLUDED
-#include "position.h"
+#include "Position.h"
+#include "Boat.h""
 typedef struct Boat Boat;
 
 Boat createBoat(Position startPos, Position endPos);
