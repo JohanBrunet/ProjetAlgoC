@@ -5,9 +5,6 @@
 #include "BoatList.h"
 
 typedef struct Grid Grid;
-struct Grid
-{
-};
 
 Grid createGrid(int width, int height);
 Position getPos(int x, int y);

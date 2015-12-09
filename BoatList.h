@@ -1,10 +1,8 @@
 #ifndef BOATLIST_H_INCLUDED
 #define BOATLIST_H_INCLUDED
+#include "Position.h"
 
 typedef struct BoatList BoatList;
-struct BoatList {
-    Boat[] boatList;
-};
 
 Boat addBoat(Boat boat);
 bool removeBoat(Boat boat);
