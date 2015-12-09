@@ -6,7 +6,7 @@ typedef Player Player;
 
 Player createPlayer(BoatList boats, int gridLines, int gridColums);
 BoatList getPlacedBoats();
-BoatList getRemainingBoats();
+bool isPlaerDead();
 Player placeBoats();
 
 #endif // PLAYER_H_INCLUDED
