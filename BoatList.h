@@ -1,5 +1,5 @@
-#ifndef BOATLIST_H_INCLUDED
-#define BOATLIST_H_INCLUDED
+#ifndef BOATLIST_H
+#define BOATLIST_H
 #include "Position.h"
 
 typedef struct BoatList BoatList;
@@ -11,4 +11,4 @@ Boat getBoat(int numBoat);
 bool boatAllPlaced();
 bool boatAllDead();
 
-#endif // BOATLIST_H_INCLUDED
+#endif // BOATLIST_H

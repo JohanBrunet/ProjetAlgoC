@@ -1,5 +1,5 @@
-#ifndef POSITION_H_INCLUDED
-#define POSITION_H_INCLUDED
+#ifndef POSITION_H
+#define POSITION_H
 #include "Boat.h"
 
 typedef struct Position Position;
@@ -11,4 +11,4 @@ Position hit();
 bool isHit();
 Boat getBoat();
 
-#endif // POSITION_H_INCLUDED
+#endif // POSITION_H

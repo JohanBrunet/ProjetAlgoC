@@ -1,5 +1,5 @@
-#ifndef GAME_H_INCLUDED
-#define GAME_H_INCLUDED
+#ifndef GAME_H
+#define GAME_H
 #include "Position.h"
 #include "Boat.h"
 #include "BoatList.h"
@@ -16,4 +16,4 @@ void setNextPlayerAcive();
 
 
 
-#endif // GAME_H_INCLUDED
+#endif // GAME_H

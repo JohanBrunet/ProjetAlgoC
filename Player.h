@@ -1,5 +1,5 @@
-#ifndef PLAYER_H_INCLUDED
-#define PLAYER_H_INCLUDED
+#ifndef PLAYER_H
+#define PLAYER_H
 #include "BoatList.h"
 
 typedef Player Player;
@@ -9,4 +9,4 @@ BoatList getPlacedBoats();
 bool isPlaerDead();
 Player placeBoats();
 
-#endif // PLAYER_H_INCLUDED
+#endif // PLAYER_H

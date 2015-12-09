@@ -1,5 +1,5 @@
-#ifndef GRID_H_INCLUDED
-#define GRID_H_INCLUDED
+#ifndef GRID_H
+#define GRID_H
 #include "Position.h"
 #include "Boat.h"
 #include "BoatList.h"
@@ -12,4 +12,4 @@ Boat getBoatFromPos(Position position);
 bool isPosValid(Position position);
 bool isBoatInSight(Position position);
 
-#endif // GRID_H_INCLUDED
+#endif // GRID_H
