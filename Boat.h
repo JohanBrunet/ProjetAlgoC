@@ -2,12 +2,6 @@
 #define BATEAU_H_INCLUDED
 #include "position.h"
 typedef struct Boat Boat;
-struct Boat
-{
-    int startPos;
-    int endPos;
-    Position[] posList;
-};
 
 Boat createBoat(Position startPos, Position endPos);
 int getSize();
