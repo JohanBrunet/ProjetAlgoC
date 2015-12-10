@@ -31,6 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Boat.h" />
+		<Unit filename="BoatList.h" />
+		<Unit filename="Game.h" />
+		<Unit filename="Grid.h" />
+		<Unit filename="Player.h" />
+		<Unit filename="Position.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

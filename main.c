@@ -33,8 +33,18 @@ int main()
         int y;
         scanf("%d", &y);    // Récupère la coordonnée y saisie par l'utilisateur
         Position position = createPos(x,y);
-        game.shoot(position);   // On tire sur la position désignée par le joueur
-        // Faire le if sur le résultat du tir
+        int result = game.shoot(position);   // On tire sur la position désignée par le joueur
+        switch(result){
+            case 0: printf("A l'eau !");
+                break;
+            case 1: printf("En vue !");
+                break;
+            case 2: printf("Touché !");
+                break;
+            case -1: printf("Coordonnées invalides !");
+                break;
+            default: break;
+        }
         // Afficher le résultat du tir
         game.setNextPlayerActive();     // On passe au joueur suivant
         joueurActif = game.getActivePlayer();   // On récupère le joueur actif
@@ -47,4 +57,13 @@ int main()
     return 0;
 }
 
+void placeBoats(Player player){
+    printf("Veuillez placer votre premier bateau (taille 1) : ");
+    int result = player.placeBoat(Player.getBoat(0));
+    switch (result):
+    if(result == 0) {
+        printf("Bad coordinates")
+    }
 
+
+}
