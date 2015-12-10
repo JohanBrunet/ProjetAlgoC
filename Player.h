@@ -4,10 +4,14 @@
 
 typedef Player Player;
 
-Player createPlayer(BoatList boats, int gridLines, int gridColums); // Crée un joueur avec une liste de bateaux non placés, il les placera par la suite. La grille du joueur est crée ici a partir de ses dimensions
-BoatList getPlacedBoats(); // Renvoie une liste de tous les bateaux placés du joueur
-bool isPlayerDead(); // Vérifie si le joueur a au moins un bateau restant
-Player placeBoats(); // Procédure de placements des bateaux non placés du joueur
+Player createPlayer(BoatList boats, int gridLines, int gridColums); // Crï¿½e un joueur avec une liste de bateaux non placï¿½s, il les placera par la suite. La grille du joueur est crï¿½e ici a partir de ses dimensions
+BoatList getPlacedBoats(); // Renvoie une liste de tous les bateaux placï¿½s du joueur
+bool isPlayerDead(); // Vï¿½rifie si le joueur a au moins un bateau restant
+
+Player placeBoat(); // Procï¿½dure de placement d'un bateau du joueur en fonction de la place du bateau dans la liste de bateaux. 
+//Prend en paramÃ¨tre le bateau Ã  placer, la position de dÃ©part et la position de fin du bateau. 
+//Renvoie 1 si les position et l'indice Ã©taient conforme et que le bateau ne se superposait pas, renvoie 0 dans le cas contraire.
+
 Grid getGrid(); // Renvoie la grille du joueur
 
 #endif // PLAYER_H

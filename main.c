@@ -10,60 +10,144 @@
 
 int main()
 {
-    printf("Bienvenue dans la partie\n");   // Signale à l'utilisateur qu'il commence une partie
+    printf("Bienvenue dans la partie\n");   // Signale ï¿½ l'utilisateur qu'il commence une partie
 
-    Game game = createGame(20,20);  // Création de la partie avec initialisation des joueurs, prend en paramètres la taille e la grille
+    Game game = createGame(20,20);  // Crï¿½ation de la partie avec initialisation des joueurs, prend en paramï¿½tres la taille e la grille
     game.setNextPlayerAcive();  // Rend le premier joueur actif
-    Player joueurActif = game.getActivePlayer();    // Récupère le joueur actif
+    Player joueurActif = game.getActivePlayer();    // Rï¿½cupï¿½re le joueur actif
     printf("Le joueur 1 va placer ses bateaux\n");
-    joueurActif.placeBoats();   // Le joueur actif place ses bateaux
+    placeBoats(joueurActif);   // Le joueur actif place ses bateaux
     game.setNextPlayerActive();     // On passe au joueur suivant
     printf("Le joueur 2 va placer ses bateaux\n");
-    joueurActif = game.getActivePlayer();   // Le deuxième joueur place ses bateaux
-    joueurActif.placeBoats();   // Le deuxième joueur place ses bateaux
+    joueurActif = game.getActivePlayer();   // Le deuxiï¿½me joueur place ses bateaux
+    placeBoats(joueurActif);   // Le deuxiï¿½me joueur place ses bateaux
     game.setNextPlayerActive();     // On passe au joueur suivant
-    joueurActif = game.getActivePlayer();   // On récupère le joueur actif
+    joueurActif = game.getActivePlayer();   // On rï¿½cupï¿½re le joueur actif
 
     while (not joueurActif.isPlayerDead()) {
         printf("C'est au joueur %d de tirer !\n", game.getNumPlayer(joueurActif));  // Le joueur actif va effectuer un tir
-        printf("Veuillez entrer la coordonnée x du tir");
+        printf("Veuillez entrer la coordonnï¿½e x du tir");
         int x;
-        scanf("%d", &x);    // Récupère la coordonnée x saisie par l'utilisateur
-        printf("Veuillez entrer la coordonnée y du tir");
+        scanf("%d", &x);    // Rï¿½cupï¿½re la coordonnï¿½e x saisie par l'utilisateur
+        printf("Veuillez entrer la coordonnï¿½e y du tir");
         int y;
-        scanf("%d", &y);    // Récupère la coordonnée y saisie par l'utilisateur
+        scanf("%d", &y);    // Rï¿½cupï¿½re la coordonnï¿½e y saisie par l'utilisateur
         Position position = createPos(x,y);
-        int result = game.shoot(position);   // On tire sur la position désignée par le joueur
+        int result = game.shoot(position);   // On tire sur la position dï¿½signï¿½e par le joueur
         switch(result){
             case 0: printf("A l'eau !");
                 break;
             case 1: printf("En vue !");
                 break;
-            case 2: printf("Touché !");
+            case 2: printf("Touchï¿½ !");
                 break;
-            case -1: printf("Coordonnées invalides !");
+            case -1: printf("Coordonnï¿½es invalides !");
                 break;
             default: break;
         }
-        // Afficher le résultat du tir
         game.setNextPlayerActive();     // On passe au joueur suivant
-        joueurActif = game.getActivePlayer();   // On récupère le joueur actif
+        joueurActif = game.getActivePlayer();   // On rï¿½cupï¿½re le joueur actif
     }
-    game.setNextPlayerActive();     // Le joueur suivant est le vainqueur car le joueur précédent est mort
-    joueurActif = game.getActivePlayer();   // On récupère le joueur gagnant
-    printf("FIN DE PARTIE, le joueur %d a gagné, bien joué !\n", game.getNumPlayer(joueurActif));   // On affiche qui a gagné la partie
+    game.setNextPlayerActive();     // Le joueur suivant est le vainqueur car le joueur prï¿½cï¿½dent est mort
+    joueurActif = game.getActivePlayer();   // On rï¿½cupï¿½re le joueur gagnant
+    printf("FIN DE PARTIE, le joueur %d a gagnï¿½, bien jouï¿½ !\n", game.getNumPlayer(joueurActif));   // On affiche qui a gagnï¿½ la partie
 
     sleep(5000);
     return 0;
 }
 
+// Place les bateaux d'un joueur. Demande les positions, et appelle joueur.placeBoat;
 void placeBoats(Player player){
-    printf("Veuillez placer votre premier bateau (taille 1) : ");
-    int result = player.placeBoat(Player.getBoat(0));
-    switch (result):
-    if(result == 0) {
-        printf("Bad coordinates")
+    Position posDebut = new Position(-1,-1);
+    Position posFin = new POsition(-1,-1);
+    Grid grille = player.getGrid();
+    printf("Veuillez placer votre premier bateau (taille 1) : \n");
+    int result = 0;
+    while (result == 0) {
+        printf("Entrez les coordonnÃ©es du dÃ©but du bateau\n");
+        posDebut = getInputCoordinates(grille);
+        printf("Entrez les coordonnÃ©es de la fin du bateau\n");
+        posFin = getInputCoordinates(grille);
+        
+        result = player.placeBoat(Player.getBoat(0), posDebut, posFin);
+        if(result == 0) {
+            printf("CoordonnÃ©es incorrectes");
+        }
+    } 
+    printf("Veuillez placer votre premier bateau (taille 2) : \n");
+    result = 0;
+    while (result == 0) {
+        printf("Entrez les coordonnÃ©es du dÃ©but du bateau\n");
+        posDebut = getInputCoordinates(grille);
+        printf("Entrez les coordonnÃ©es de la fin du bateau\n");
+        posFin = getInputCoordinates(grille);
+        
+        result = player.placeBoat(Player.getBoat(0), posDebut, posFin);
+        if(result == 0) {
+            printf("CoordonnÃ©es incorrectes");
+        }
+    } 
+    printf("Veuillez placer votre premier bateau (taille 3) : \n");
+    result = 0;
+    while (result == 0) {
+        printf("Entrez les coordonnÃ©es du dÃ©but du bateau\n");
+        posDebut = getInputCoordinates(grille);
+        printf("Entrez les coordonnÃ©es de la fin du bateau\n");
+        posFin = getInputCoordinates(grille);
+        
+        result = player.placeBoat(Player.getBoat(0), posDebut, posFin);
+        if(result == 0) {
+            printf("CoordonnÃ©es incorrectes");
+        }
+    } 
+    printf("Veuillez placer votre premier bateau (taille 3) : \n");
+    result = 0;
+    while (result == 0) {
+        printf("Entrez les coordonnÃ©es du dÃ©but du bateau\n");
+        posDebut = getInputCoordinates(grille);
+        printf("Entrez les coordonnÃ©es de la fin du bateau\n");
+        posFin = getInputCoordinates(grille);
+        
+        result = player.placeBoat(Player.getBoat(0), posDebut, posFin);
+        if(result == 0) {
+            printf("CoordonnÃ©es incorrectes");
+        }
+    } 
+    printf("Veuillez placer votre premier bateau (taille 4) : \n");
+    result = 0;
+    while (result == 0) {
+        printf("Entrez les coordonnÃ©es du dÃ©but du bateau\n");
+        posDebut = getInputCoordinates(grille);
+        printf("Entrez les coordonnÃ©es de la fin du bateau\n");
+        posFin = getInputCoordinates(grille);
+        
+        result = player.placeBoat(Player.getBoat(0), posDebut, posFin);
+        if(result == 0) {
+            printf("CoordonnÃ©es incorrectes");
+        }
+    } 
+    printf("Veuillez placer votre premier bateau (taille 5) : \n");
+    result = 0;
+    while (result == 0) {
+        printf("Entrez les coordonnÃ©es du dÃ©but du bateau\n");
+        posDebut = getInputCoordinates(grille);
+        printf("Entrez les coordonnÃ©es de la fin du bateau\n");
+        posFin = getInputCoordinates(grille);
+        
+        result = player.placeBoat(Player.getBoat(0), posDebut, posFin);
+        if(result == 0) {
+            printf("CoordonnÃ©es incorrectes");
+        }
     }
+}
 
-
+// RÃ©cupÃ¨re la position associÃ©e Ã  deux coordonnÃ©es dans la grille spÃ©cifiÃ©e
+Position getInputCoordinates(Grid grille) {
+    printf("Entrez l'abscisse\n");
+    int x;
+    scanf("%d", &x);
+    printf("Entrez l'ordonnÃ©e\n");
+    int y;
+    scanf("%d", &x);
+    return grille.getPosFromCoord(x, y);
 }
