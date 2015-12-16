@@ -20,7 +20,7 @@ int choisir_premier_joueur(Joueur j1,Joueur j2);
 /* Renvoie le joueur à l'aide de son numéro  */
 Joueur recuperer_joueur(int i);
 
-/* Joueur donne les coordonnées du bateau (ses coordonnées doivent être valides) à mettre sur le grille,
+/* Joueur donne les coordonnées du bateau (ses coordonnées doivent être valides) à mettre sur la grille,
 attention les bateaux ne doivent pas se chevaucher et chaque joueur en possède 5,
 de tailles différentes et imposées, 1 bateau de taille 1,1 de taille 2, 2 de taille 3 et 1 de taille 4 */
 Grille placer_bateau(Bateau b, Grille g);

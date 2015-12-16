@@ -14,7 +14,7 @@
 /* ******************************************* */
 
 int main (void)
-    {
+{
     printf("Lancement du programme de la bataille navale \n");
     printf("Let's go !\n");
     printf("\n");
@@ -73,8 +73,8 @@ int main (void)
     printf("le joueur numéro %d va commencer à placer ses bateaux",j);
 
     /* le premier joueur place ses bateaux */
-        /* on met ses bateaux dans l'ensemble des bateaux */
-        if (j =  = 1){
+    /* on met ses bateaux dans l'ensemble des bateaux */
+        if (j == 1){
             g1 = placer_bateau(bat11,g1);
             bx1 = ajouter_bateau(bat11);
             g1 = placer_bateau(bat12,g1);
@@ -142,9 +142,10 @@ int main (void)
             y = tire_ligne();
              Resultat res;
             /* si le joueur 1 tire */
-            if (n =  = 1){
+            if (n == 1){
                 /* s'il y a un bateau à la position */
                 if (positionOccupee(g2,x,y)){
+                    //WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT juste au dessous
                     Bateau b;
                     b = BateauSousTir(g2,x,y);
                     b = bateau_touche(b,x,y);
@@ -203,7 +204,7 @@ int main (void)
             }
     /* Fin de la partie et affiche le résultat */
     printf("la partie est terminée");
-    if (a_gagne(j1,j2) =  = j1){
+    if (a_gagne(j1,j2) == j1){
         printf("Bravo joueur %d ! vous avez gagné !",1);
     }
         else {
