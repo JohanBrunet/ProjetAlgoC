@@ -1,22 +1,25 @@
-#include <stdlib.h> 
-#include <stdio.h> 
+#include <stdlib.h>
+#include <stdio.h>
 #ifndef BATEAU_H
 #define BATEAU_H
 #include "resultat.h"
 
-typedef struct TBateau TBateau;/*structure qui contient les positions d'un bateau (ses coordonnées)*/
-
+/* Structure qui contient les positions d'un bateau (ses coordonnées) */
+typedef struct TBateau TBateau;
 typedef TBateau* Bateau;
 
+/* Créer un bateau vide (sans coordonnées) qui n'est pas encore placé */
 Bateau Creer_bateau();
-/*créer un bateau vide (sans coordonnées) qui n'est pas encore placé*/
+
+/* Renvoie vrai (1=vrai,0=faux) si le bateau est vide (plus aucune coordonnées) */
 int bateau_vide(Bateau b);
-/*renvoie vrai (1=vrai,0=faux) si le bateau est vide (plus aucune coordonnées)*/
+
+/* Renvoie la taille d'un bateau (nombre de coordonnées d'un bateau) */
 int taille_bateau(Bateau b);
-/*renvoie la taille d'un bateau (nombre de coordonnées d'un bateau)*/
+
+/* Renvoie un résultat en fonction du tir et de la grille, ce résultat est soit "touché","coulé","enVue","loupé" */
 Resultat coup_au_but(Bateau b,int x,int y);
-/*renvoie un résultat en fonction du tir et de la grille, ce résultat est soit "touché","coulé","enVue","loupé"*/
 
 #endif
 
- 
+

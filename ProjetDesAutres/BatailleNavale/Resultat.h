@@ -1,27 +1,35 @@
-#include <stdlib.h> 
-#include <stdio.h> 
+#include <stdlib.h>
+#include <stdio.h>
 #ifndef RESULTAT_H
 #define RESULTAT_H
 #include "Bateau.h"
 
-typedef struct TResultat TResultat ;/*structure qui permet d'afficher un résultat ("touché","coulé","en Vue","loupé") et de poursuivre le déroulement du jeu*/
+/* Structure qui permet d'afficher un résultat ("touché","coulé","en Vue","loupé") et de poursuivre le déroulement du jeu */
+typedef struct TResultat TResultat ;
 typedef TResultat* Resultat;
 
-
+/* Créer le résultat "coulé" */
 Resultat creer_coule();
-/*créer le résultat "coulé"*/
+
+/* Créer le résultat "touché" */
 Resultat creer_touche();
-/*créer le résultat "touché"*/
+
+/* Créer le résultat "en Vue" */
 Resultat creer_enVue();
-/*créer le résultat "en Vue"*/
+
+/* Créer le résultat "loupé" */
 Resultat creer_loupe();
-/*créer le résultat "loupé"*/
+
+/* Renvoie vrai (1=vrai,0=faux) si toutes les coordonnées du bateau ont été touché (si le bateau est vide) */
 int est_coule(Bateau b);
-/*renvoie vrai (1=vrai,0=faux) si toutes les coordonnées du bateau ont été touché (si le bateau est vide)*/
+
+/* Renvoie vrai si une coordonnée d'un bateau se trouve sur la même colonne ou la même ligne que la position du tir sur la grille */
 int est_enVue(int x,int y);
-/*renvoie vrai si une coordonnée d'un bateau se trouve sur la même colonne ou la même ligne que la position du tir sur la grille*/
+
+/* Renvoie vrai si une coordonnée d'un bateau est touchée par le tir */
 int est_touche(Bateau b);
-/*renvoie vrai si une coordonnée d'un bateau est touchée par le tir*/
+
+/* Renvoie vrai si rien n'était à la position du tir ou autour(sur même ligne ou sur même colonne) */
 int est_loupe(Bateau b);
-/*renvoie vrai si rien n'était à la position du tir ou autour(sur même ligne ou sur même colonne)*/
+
 #endif
