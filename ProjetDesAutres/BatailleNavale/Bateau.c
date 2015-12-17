@@ -8,7 +8,7 @@
     Retourne le bateau vide :il n'a pas de coordonnées et n'est pas encore placé
     bateauVide renvoie True
 */
-TBateau CreerBateau() {
+TBateau creerBateau() {
     return NULL;
 }
 
@@ -19,6 +19,19 @@ Bateau bateauVide(Bateau b) {
 int tailleBateau(Bateau b) {
     return b.taille;
 }
+
+bool setCoordDebut(int x, int y) {
+    this.pos1X = x;
+    this.pos1Y = y;
+}
+
+bool setCoordFin(int x, int y) {
+    this.pos2X = x;
+    this.pos2Y = y;
+}
+
+
+// A dégager ensuite
 /* RIEN A FAIRE LA ! */
 Resultat coupAuBut(Bateau b, int x, int y) {
 

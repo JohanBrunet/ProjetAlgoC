@@ -9,27 +9,27 @@ typedef struct TResultat TResultat ;
 typedef TResultat* Resultat;
 
 /* Créer le résultat "coulé" */
-Resultat creer_coule();
+Resultat creerCoule();
 
 /* Créer le résultat "touché" */
-Resultat creer_touche();
+Resultat creerTouche();
 
 /* Créer le résultat "en Vue" */
-Resultat creer_enVue();
+Resultat creerEnVue();
 
 /* Créer le résultat "loupé" */
-Resultat creer_loupe();
+Resultat creerLoupe();
 
 /* Renvoie vrai (1=vrai,0=faux) si toutes les coordonnées du bateau ont été touché (si le bateau est vide) */
-int est_coule(Bateau b);
+int estCoule(Bateau b);
 
 /* Renvoie vrai si une coordonnée d'un bateau se trouve sur la même colonne ou la même ligne que la position du tir sur la grille */
-int est_enVue(int x,int y);
+int estEnVue(int x,int y);
 
 /* Renvoie vrai si une coordonnée d'un bateau est touchée par le tir */
-int est_touche(Bateau b);
+int estTouche(Bateau b);
 
 /* Renvoie vrai si rien n'était à la position du tir ou autour(sur même ligne ou sur même colonne) */
-int est_loupe(Bateau b);
+int estLoupe(Bateau b);
 
 #endif

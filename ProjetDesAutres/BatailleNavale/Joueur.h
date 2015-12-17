@@ -5,13 +5,16 @@
 #include "Bateaux.h"
 
 /* Structure du joueur qui contiendra un numéro et ses bateaux  */
-typedef struct TJoueur TJoueur;
+typedef struct TJoueur TJoueur {
+    Bateaux listeBateaux;
+    int numeroJoueur;
+}
 typedef TJoueur* Joueur;
 
 /* Créer un joueur vide (sans bateau) avec seulement son numéro  */
-Joueur Creer_joueur();
+Joueur creerJoueur();
 
 /* Renvoie l'ensemble des bateaux restantes du joueur  */
-Bateaux Bateaux_non_coule(Joueur j);
+Bateaux bateauxNonCoules(Joueur j);
 
 #endif

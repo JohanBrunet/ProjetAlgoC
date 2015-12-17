@@ -21,125 +21,123 @@ int main (void)
 
     /* Création de la partie */
     Partie p;
-    p  =  Creer_partie();
+    p  =  creerPartie();
 
     /* Création d'une grille par joueur */
     /* Grille du joueur 1 */
     Grille g1;
     /* Grille du joueur 2 */
     Grille g2;
-    g1 = Creer_grille();
-    g2 = Creer_grille();
+    g1 = creerGrille();
+    g2 = creerGrille();
 
     /* Création des deux joueurs */
     Joueur j1;
     Joueur j2;
-    j1 = Creer_joueur();
-    j2 = Creer_joueur();
+    j1 = creerJoueur();
+    j2 = creerJoueur();
 
     /* Création des ensembles de Bateaux */
     Bateaux bx1;
     Bateaux bx2;
-    bx1 = Creer_bateaux();
-    bx2 = Creer_bateaux();
+    bx1 = creerBateaux();
+    bx2 = creerBateaux();
 
     /* Création des bateaux */
     /* Bateaux du joueur 1 */
     Bateau bat11;
-    bat11 = Creer_bateau();
+    bat11 = creerBateau();
     Bateau bat12;
-    bat12 = Creer_bateau();
+    bat12 = creerBateau();
     Bateau bat13;
-    bat13 = Creer_bateau();
+    bat13 = creerBateau();
     Bateau bat14;
-    bat14 = Creer_bateau();
+    bat14 = creerBateau();
     Bateau bat15;
-    bat15 = Creer_bateau();
+    bat15 = creerBateau();
     /* Bateaux du joueur 2 */
     Bateau bat21;
-    bat21 = Creer_bateau();
+    bat21 = creerBateau();
     Bateau bat22;
-    bat22 = Creer_bateau();
+    bat22 = creerBateau();
     Bateau bat23;
-    bat23 = Creer_bateau();
+    bat23 = creerBateau();
     Bateau bat24;
-    bat24 = Creer_bateau();
+    bat24 = creerBateau();
     Bateau bat25;
-    bat25 = Creer_bateau();
+    bat25 = creerBateau();
 
     /* choix du premier joueur à placer ses bateaux */
     int j;
-    j = choisir_premier_joueur(j1,j2);
+    j = choisirPremierJoueur(j1,j2);
     printf("le joueur numéro %d va commencer à placer ses bateaux",j);
 
     /* le premier joueur place ses bateaux */
     /* on met ses bateaux dans l'ensemble des bateaux */
         if (j == 1){
-            g1 = placer_bateau(bat11,g1);
-            bx1 = ajouter_bateau(bat11);
-            g1 = placer_bateau(bat12,g1);
-             bx1 = ajouter_bateau(bat12);
-            g1 = placer_bateau(bat13,g1);
-             bx1 = ajouter_bateau(bat13);
-            g1 = placer_bateau(bat14,g1);
-             bx1 = ajouter_bateau(bat14);
-            g1 = placer_bateau(bat15,g1);
-             bx1 = ajouter_bateau(bat15);
+            g1 = placerBateau(bat11,g1);
+            bx1 = ajouterBateau(bat11);
+            g1 = placerBateau(bat12,g1);
+             bx1 = ajouterBateau(bat12);
+            g1 = placerBateau(bat13,g1);
+             bx1 = ajouterBateau(bat13);
+            g1 = placerBateau(bat14,g1);
+             bx1 = ajouterBateau(bat14);
+            g1 = placerBateau(bat15,g1);
+             bx1 = ajouterBateau(bat15);
 
             /* l'autre joueur va placer ses bateaux lui aussi */
             printf("le joueur numéro %d va commencer à placer ses bateaux",2);
 
-            g2 = placer_bateau(bat21,g2);
-            bx2 = ajouter_bateau(bat21);
-            g2 = placer_bateau(bat22,g2);
-            bx2 = ajouter_bateau(bat22);
-            g2 = placer_bateau(bat23,g2);
-            bx2 = ajouter_bateau(bat23);
-            g2 = placer_bateau(bat24,g2);
-            bx2 = ajouter_bateau(bat24);
-            g2 = placer_bateau(bat25,g2);
-            bx2 = ajouter_bateau(bat25);
+            g2 = placerBateau(bat21,g2);
+            bx2 = ajouterBateau(bat21);
+            g2 = placerBateau(bat22,g2);
+            bx2 = ajouterBateau(bat22);
+            g2 = placerBateau(bat23,g2);
+            bx2 = ajouterBateau(bat23);
+            g2 = placerBateau(bat24,g2);
+            bx2 = ajouterBateau(bat24);
+            g2 = placerBateau(bat25,g2);
+            bx2 = ajouterBateau(bat25);
         }
         else{
-            g2 = placer_bateau(bat21,g2);
-             bx2 = ajouter_bateau(bat21);
-            g2 = placer_bateau(bat22,g2);
-            bx2 = ajouter_bateau(bat22);
-            g2 = placer_bateau(bat23,g2);
-            bx2 = ajouter_bateau(bat23);
-            g2 = placer_bateau(bat24,g2);
-            bx2 = ajouter_bateau(bat24);
-            g2 = placer_bateau(bat25,g2);
-            bx2 = ajouter_bateau(bat25);
+            g2 = placerBateau(bat21,g2);
+             bx2 = ajouterBateau(bat21);
+            g2 = placerBateau(bat22,g2);
+            bx2 = ajouterBateau(bat22);
+            g2 = placerBateau(bat23,g2);
+            bx2 = ajouterBateau(bat23);
+            g2 = placerBateau(bat24,g2);
+            bx2 = ajouterBateau(bat24);
+            g2 = placerBateau(bat25,g2);
+            bx2 = ajouterBateau(bat25);
 
             /* l'autre joueur va placer ses bateaux lui aussi */
             printf("le joueur numéro %d va commencer à placer ses bateaux",1);
 
-            g1 = placer_bateau(bat11,g1);
-            bx1 = ajouter_bateau(bat11);
-            g1 = placer_bateau(bat12,g1);
-            bx1 = ajouter_bateau(bat12);
-            g1 = placer_bateau(bat13,g1);
-            bx1 = ajouter_bateau(bat13);
-            g1 = placer_bateau(bat14,g1);
-            bx1 = ajouter_bateau(bat14);
-            g1 = placer_bateau(bat15,g1);
-            bx1 = ajouter_bateau(bat15);
+            g1 = placerBateau(bat11,g1);
+            bx1 = ajouterBateau(bat11);
+            g1 = placerBateau(bat12,g1);
+            bx1 = ajouterBateau(bat12);
+            g1 = placerBateau(bat13,g1);
+            bx1 = ajouterBateau(bat13);
+            g1 = placerBateau(bat14,g1);
+            bx1 = ajouterBateau(bat14);
+            g1 = placerBateau(bat15,g1);
+            bx1 = ajouterBateau(bat15);
         }
     /* on démarre le jeu */
         /* on choisit le premier joueur à tirer au hasard */
     int n;
-    n = choisir_premier_joueur(j1,j2);
+    n = choisirPremierJoueur(j1,j2);
     Joueur joueur;
-    joueur = recuperer_joueur(n);
-    joueur = activer_joueur(joueur);
+    joueur = recupererJoueur(n);
+    joueur = activerJoueur(joueur);
         /* boucle du jeu, le jeu s'arrete quand la partie est finie */
-        while(!(est_fini(j1,j2))){
+        while(!(estFini(j1,j2))){
             printf("joueur %d à vous de tirer :\n",n);
             int x,y;
-            /* coordonnées du tir */
-            x = tire_colonne();
-            y = tire_ligne();
+            // Ajouter le tir
              Resultat res;
             /* si le joueur 1 tire */
             if (n == 1){
@@ -147,64 +145,64 @@ int main (void)
                 if (positionOccupee(g2,x,y)){
                     //WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT juste au dessous
                     Bateau b;
-                    b = BateauSousTir(g2,x,y);
-                    b = bateau_touche(b,x,y);
+                    b = bateauSousTir(g2,x,y);
+                    b = bateauTouche(b,x,y);
                     res = coupAuBut(b,x,y);
                     return res; /* affiche le résultat */
                     /* test si le bateau est coulé */
-                    if (bateau_vide(b)){
+                    if (bateauVide(b)){
                         Resultat coule;
-                        coule = creer_coule();
-                        bx2 = supprime_bateau(b,bx2);
+                        coule = creerCoule();
+                        bx2 = supprimeBateau(b,bx2);
                     }
                 }
                 /* si le tir ne touche rien */
                 else{
-                    if(est_enVue(x,y)){
-                        res = creer_enVue();
+                    if(estEnVue(x,y)){
+                        res = creerEnVue();
                         return res;
                     }
                     else{
-                        res = creer_loupe();
+                        res = creerLoupe();
                         return res;
                     }
                 }
                 /* on change de joueur */
-                j2 = activer_joueur(j2);
+                j2 = activerJoueur(j2);
                 n = 2;
             }
             /* si le joueur 2 tire */
             else{
                     if (positionOccupee(g1,x,y)){
                         Bateau b;
-                        b = BateauSousTir(g1,x,y);
-                        b = bateau_touche(b,x,y);
+                        b = bateauSousTir(g1,x,y);
+                        b = bateauTouche(b,x,y);
                         res = coupAuBut(b,x,y);
                         return res;
-                        if (bateau_vide(b)){
+                        if (bateauVide(b)){
                             Resultat coule;
-                            coule = creer_coule();
-                            bx1 = supprime_bateau(b,bx1);
+                            coule = creerCoule();
+                            bx1 = supprimeBateau(b,bx1);
                         }
                     }
                     else{
-                        if(est_enVue(x,y)){
-                            res = creer_enVue();
+                        if(estEnVue(x,y)){
+                            res = creerEnVue();
                             return res;
                         }
                         else{
-                            res = creer_loupe();
+                            res = creerLoupe();
                             return res;
                         }
                     }
                 }
             /* On change de joueur */
-            j1 = activer_joueur(j1);
+            j1 = activerJoueur(j1);
             n = 1;
             }
     /* Fin de la partie et affiche le résultat */
     printf("la partie est terminée");
-    if (a_gagne(j1,j2) == j1){
+    if (aGagne(j1,j2) == j1){
         printf("Bravo joueur %d ! vous avez gagné !",1);
     }
         else {
