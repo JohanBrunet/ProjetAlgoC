@@ -31,6 +31,7 @@ bool setCoordFin(int x, int y) {
 }
 
 
+
 // A dégager ensuite
 /* RIEN A FAIRE LA ! */
 Resultat coupAuBut(Bateau b, int x, int y) {

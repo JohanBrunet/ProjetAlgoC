@@ -78,14 +78,15 @@ int main (void)
             g1 = placerBateau(bat11,g1);
             bx1 = ajouterBateau(bat11);
             g1 = placerBateau(bat12,g1);
-             bx1 = ajouterBateau(bat12);
+            bx1 = ajouterBateau(bat12);
             g1 = placerBateau(bat13,g1);
-             bx1 = ajouterBateau(bat13);
+            bx1 = ajouterBateau(bat13);
             g1 = placerBateau(bat14,g1);
-             bx1 = ajouterBateau(bat14);
+            bx1 = ajouterBateau(bat14);
             g1 = placerBateau(bat15,g1);
-             bx1 = ajouterBateau(bat15);
+            bx1 = ajouterBateau(bat15);
 
+            j = activerJoueur(2);
             /* l'autre joueur va placer ses bateaux lui aussi */
             printf("le joueur numéro %d va commencer à placer ses bateaux",2);
 
@@ -102,7 +103,7 @@ int main (void)
         }
         else{
             g2 = placerBateau(bat21,g2);
-             bx2 = ajouterBateau(bat21);
+            bx2 = ajouterBateau(bat21);
             g2 = placerBateau(bat22,g2);
             bx2 = ajouterBateau(bat22);
             g2 = placerBateau(bat23,g2);
@@ -112,6 +113,7 @@ int main (void)
             g2 = placerBateau(bat25,g2);
             bx2 = ajouterBateau(bat25);
 
+            j = activerJoueur(2);
             /* l'autre joueur va placer ses bateaux lui aussi */
             printf("le joueur numéro %d va commencer à placer ses bateaux",1);
 
@@ -137,6 +139,8 @@ int main (void)
         while(!(estFini(j1,j2))){
             printf("joueur %d à vous de tirer :\n",n);
             int x,y;
+            printf("Veuillez entrer la ligne du tir :");
+            printf("Veuillez entrer la colonne du tir :");
             // Ajouter le tir
              Resultat res;
             /* si le joueur 1 tire */

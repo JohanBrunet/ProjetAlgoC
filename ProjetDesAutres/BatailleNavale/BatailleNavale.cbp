@@ -31,9 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="BatailleNavale.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Bateau.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Bateau.h" />
+		<Unit filename="Bateaux.h" />
+		<Unit filename="Grille.h" />
+		<Unit filename="Joueur.h" />
+		<Unit filename="Partie.h" />
+		<Unit filename="Resultat.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
