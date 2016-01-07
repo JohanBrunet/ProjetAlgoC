@@ -6,8 +6,14 @@
 #include "Bateau.h"
 
 /* Structure qui permet de positionner les bateaux et vérifier le résultat d'un tir */
-typedef struct TGrille TGrille ;
-typedef TGrille* Grille;
+typedef struct TGrille TGrille{
+	int nbColonnes;
+	int nbLignes;
+	Bateau[] bateaux;
+	int[][] positions;
+	int[][] positionDejaVisee;
+	Joueur joueur;
+}typedef TGrille* Grille;
 
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */
@@ -22,16 +28,16 @@ int nbLigneGrille(Grille g);
 /* Renvoie vrai (1=vrai,0=faux) si la grille est vide (sans bateau) */
 int estVide(Grille g);
 
-/* Renvoie vrai si la position du tir est bien dans la grille */
+/* Renvoie vrai (1=vrai,0=faux) si la position du tir est bien dans la grille */
 int positionValide(Grille g,int x,int y);
 
-/* Renvoie vrai s'il y a un bateau qui occupe les coordonnées du tir */
+/* Renvoie vrai (1=vrai,0=faux) s'il y a un bateau qui occupe les coordonnées du tir */
 int positionOccupee(Grille g,int x,int y);
 
 /* Donne le joueur (caractérisé par son numéro) à qui appartient la grille de bateaux */
 Joueur grilleAppartient(Grille g);
 
-/* Renvoie vrai si la position a déjà été tirée */
+/* Renvoie vrai (1=vrai,0=faux) si la position a déjà été tirée */
 int positionDejaVisee(int x,int y);
 
 /* Renvoie le bateau qui occupe la position du tir */

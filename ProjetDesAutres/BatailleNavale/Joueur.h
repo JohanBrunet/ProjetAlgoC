@@ -6,10 +6,9 @@
 
 /* Structure du joueur qui contiendra un numéro et ses bateaux  */
 typedef struct TJoueur TJoueur {
-    Bateaux listeBateaux;
+    Bateaux[] listeBateaux;
     int numeroJoueur;
-}
-typedef TJoueur* Joueur;
+}typedef TJoueur* Joueur;
 
 /* Créer un joueur vide (sans bateau) avec seulement son numéro  */
 Joueur creerJoueur();

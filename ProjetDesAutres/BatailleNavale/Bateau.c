@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include "Bateau.h"
 
-
 /*
     creerbateau : → TBateau
     Retourne le bateau vide :il n'a pas de coordonnées et n'est pas encore placé
@@ -29,8 +28,6 @@ bool setCoordFin(int x, int y) {
     this.pos2X = x;
     this.pos2Y = y;
 }
-
-
 
 // A dégager ensuite
 /* RIEN A FAIRE LA ! */
