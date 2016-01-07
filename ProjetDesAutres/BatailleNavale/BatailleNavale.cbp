@@ -41,7 +41,13 @@
 		<Unit filename="Bateaux.h" />
 		<Unit filename="Grille.h" />
 		<Unit filename="Joueur.h" />
+		<Unit filename="Partie.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Partie.h" />
+		<Unit filename="Resultat.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Resultat.h" />
 		<Extensions>
 			<code_completion />
