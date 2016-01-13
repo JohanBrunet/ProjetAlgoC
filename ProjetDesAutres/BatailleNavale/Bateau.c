@@ -33,5 +33,16 @@ bool setCoordFin(int x, int y) {
 /* RIEN A FAIRE LA ! */
 Resultat coupAuBut(Bateau b, int x, int y) {
 
+int getCoord1X(Bateau b) {
+    return this.pos1X;
+}
+int getCoord1X(Bateau b) {
+    return this.pos1Y;
+}
+int getCoord2Y(Bateau b) {
+    return this.pos2X;
+}
+int getCoord2X(Bateau b) {
+    return this.pos2Y;
 }
 

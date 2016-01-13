@@ -86,5 +86,13 @@ Bateau bateauSousTir(Grille g,int x,int y){
 
 /* Supprime la position qui a été tirée de la grille et renvoie cette grille sans la position */
 Grille retirerPosition(Grille g,int x,int y){
-
+	if (positionValide(x,y) == 0) {
+		printf("%s\n", "Position non valide !");
+	}
+	else if (positionOccupee(x,y) == 1) {
+		printf("%s\n", "Position occupée !");
+	}
+	else {
+		g->positions[x][y] = NULL;
+	}
 }
