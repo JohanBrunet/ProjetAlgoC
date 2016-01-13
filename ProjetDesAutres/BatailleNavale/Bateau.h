@@ -11,9 +11,7 @@ typedef struct TBateau TBateau {
     int pos1Y;
     int pos2X;
     int pos2Y;
-}
-typedef TBateau* Bateau;
-
+}typedef TBateau* Bateau;
 
 /* Créer un bateau vide (sans coordonnées) qui n'est pas encore placé */
 Bateau creerBateau();
@@ -33,7 +31,6 @@ int getCoord1X(Bateau b);
 int getCoord1X(Bateau b);
 int getCoord2Y(Bateau b);
 int getCoord2X(Bateau b);
-
 
 // RIEN A FAIRE LA
 /* Renvoie un résultat en fonction du tir et de la grille, ce résultat est soit "touché","coulé","enVue","loupé" */

@@ -2,14 +2,14 @@
 #include <stdio.h>
 #include "Bateau.h"
 
-
 /*
     creerbateau : → TBateau
     Retourne le bateau vide :il n'a pas de coordonnées et n'est pas encore placé
     bateauVide renvoie True
 */
 TBateau creerBateau() {
-    return NULL;
+    Bateau bateau;
+    return bateau;
 }
 
 Bateau bateauVide(Bateau b) {
@@ -29,6 +29,10 @@ bool setCoordFin(int x, int y) {
     this.pos2X = x;
     this.pos2Y = y;
 }
+
+// A dégager ensuite
+/* RIEN A FAIRE LA ! */
+Resultat coupAuBut(Bateau b, int x, int y) {
 
 int getCoord1X(Bateau b) {
     return this.pos1X;

@@ -7,24 +7,37 @@
 /* Créer une partie vide  */
 Partie creerPartie() {
     Partie p;
+    return p;
 }
 
 /* Renvoie le numéro d'un des deux joueurs au hasard  */
-int choisirPremierJoueur(Joueur j1,Joueur j2) {
+Joueur choisirPremierJoueur(Partie partie) {
     float i = rand();
-    if(i>=0.5) {
-        return j1->numeroJoueur;
+    if (i <= 0.5) {
+        return partie->joueur1;
     }
     else {
-        return j2->numeroJoueur;
+        return partie->joueur2;
     }
 }
 
 /* Renvoie le joueur à l'aide de son numéro  */
-Joueur recupererJoueur(int i);
+Joueur recupererJoueur(Partie partie, int i) {
+	if (i == 1) {
+		return partie->joueur1;
+	}
+	else if (i == 2) {
+		return partie->joueur2;
+	}
+	else {
+		printf("%s\n", "Joueur inexistant !");
+	}
+}
 
 /* Rend le joueur actif(celui qui est en train de tirer) */
-Joueur activerJoueur(Joueur j);
+Joueur activerJoueur(Joueur j) {
+	return j;
+}
 
 /* Enleve la coordonnée touchée du Bateau et de la grille et renvoie ce bateau */
 Bateau bateauTouche(Bateau b,int x,int y);
