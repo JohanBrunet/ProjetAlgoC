@@ -10,7 +10,6 @@
 typedef struct TPartie TPartie {
 	Joueur joueur1;
 	Joueur joueur2;
-	Grille grille;
 }typedef TPartie* Partie;
 
 /* Créer une partie vide  */

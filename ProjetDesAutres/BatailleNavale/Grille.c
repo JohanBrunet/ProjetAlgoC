@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <Grille.h>
+#include "Grille.h"
 
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */
@@ -8,6 +8,7 @@ Grille creerGrille(int largeur, int hauteur){
 	Grille grille;
 	grille -> nbColonnes = largeur;
 	grille -> nbLignes = hauteur;
+	return grille;
 }
 
 /* Renvoie le nombre de colonnes de la grille */

@@ -8,7 +8,7 @@
 Joueur creerJoueur(int numJoueur) {
     Joueur j;
     j->numeroJoueur = numJoueur;
-
+    return joueur;
 }
 
 /* Renvoie l'ensemble des bateaux restantes du joueur  */

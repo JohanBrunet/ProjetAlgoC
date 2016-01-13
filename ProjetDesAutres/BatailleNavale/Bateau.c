@@ -8,7 +8,8 @@
     bateauVide renvoie True
 */
 TBateau creerBateau() {
-    return NULL;
+    Bateau bateau;
+    return bateau;
 }
 
 Bateau bateauVide(Bateau b) {

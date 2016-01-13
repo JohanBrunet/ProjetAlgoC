@@ -1,16 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
-#ifndef  BATEAUX_H
-#define BATEAUX_H
-#include "Bateau.h"
-
-/* Structure qui définit un ensemble de bateaux */
-typedef struct TBateaux TBateaux {
-	Bateau[] bateaux;
-}typedef TBateaux* Bateaux;
+#include "Bateaux.h"
 
 /* Créer un ensemble de bateaux vide (sans bateaux, les bateaux ne sont pas encore placés)  */
-Bateaux creerBateaux();
+Bateaux creerBateaux() {
+	Bateaux bateaux;
+	return bateaux;
+}
 
 /* Ajoute à la suite un bateau (ensemble de coordonnées) dans l'ensemble des Bateaux */
 Bateaux ajouterBateau(Bateauxbx, Bateau b);
@@ -23,5 +19,3 @@ int nombreBateaux(Bateaux bx);
 
 /* Cherche dans l'ensemble des Bateaux le bateau donné en paramètre (ses coordonnées) et le renvoie s'il appartient à l'ensemble sinon "ce bateau a été coulé" */
 Bateau recupererBateau(Bateaux bx,Bateau b);
-
-#endif
