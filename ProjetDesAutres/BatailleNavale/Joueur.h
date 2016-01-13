@@ -8,6 +8,7 @@
 typedef struct TJoueur TJoueur {
     Bateaux listeBateaux;
     int numeroJoueur;
+    Grille grille;
 }
 typedef TJoueur* Joueur;
 
@@ -28,5 +29,12 @@ void setBateauxJoueur(Joueur j, Bateaux listeBateaux);
 
 /* Renvoie les bateaux du joueur */
 Bateaux getBateauxJoueur(Joueur j);
+
+/* Définit la Grille du joueur */
+void setGrilleJoueur(Joueur j, Grille g);
+
+/* Renvoie la Grille du joueur */
+Bateaux getGrilleJoueur(Joueur j);
+
 
 #endif
