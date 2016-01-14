@@ -7,6 +7,11 @@
 /* Créer une partie vide  */
 Partie creerPartie() {
     Partie p;
+    /* Création des deux joueurs */
+    Joueur j1;
+    Joueur j2;
+    p->joueur1 = creerJoueur(1);
+    p->joueur2 = creerJoueur(2);
     return p;
 }
 
@@ -35,8 +40,13 @@ Joueur recupererJoueur(Partie partie, int i) {
 }
 
 /* Rend le joueur actif(celui qui est en train de tirer) */
-Joueur activerJoueur(Joueur j) {
-	return j;
+Joueur activerJoueurSuivant(Partie p, Joueur j) {
+	if (getNumJoueur(j) == 1) {
+		recupererJoueur(p, 2);
+	}
+	else {
+		recupererJoueur(p, 2);
+	}
 }
 
 /* Enleve la coordonnée touchée du Bateau et de la grille et renvoie ce bateau */
