@@ -57,15 +57,92 @@ Bateaux getGrilleJoueur(Joueur j) {
 
 /* Renvoie true si le joueur a encore des bateaux non coulés */
 bool estEnVie(Joueur j) {
+    bool result = false;
     Bateaux listeBateaux = j->grille->bateaux->bateaux;
     Grille g = getGrilleJoueur(j);
     int i = nombreBateaux(listeBateaux);
     int x;
+    int X;
+    int Y;
     Bateau b;
     int compteur = 0;
-    int[][] positions;
+    int[][] positions = j->grille->getAllPositions();
     for(x=0; x<i; x++) {
-        recupererBateau(listeBateaux, x);
+        b = recupererBateau(listeBateaux, x);
+        if(b->getCoord1X() == b->getCoord2X()) {
+            if(b->getCoord1Y() == b->getCoord2Y() ) {
+                return (positions[b->getCoord1X()][b->getCoord1Y()]);
+            }
+            else if(b->getCoord1Y() > b->getCoord2Y()) {
+                for(Y=b->getCoord2Y(); Y<=b->getCoord1Y(); Y++) {
+                    if(positions[X][Y]==0) {
+                        result = true;
+                    }
+                }
+            }
+            else {
+                for(Y=b->getCoord1Y();Y<=b->getCoord2Y();Y++) {
+                    if(positions[X][Y]==0) {
+                        result = true;
+                    }
+                }
+            }
+        }
+        else {
+            if(b->getCoord1X() > b->getCoord2X()) {
+                for(X=b->getCoord2X();X<=b->getCoord1X()) {
+                    if(positions[X][Y]==0) {
+                        result = true;
+                    }
+                }
+            }
+            else {
+                for(X=b->getCoord1X();X<=b->getCoord2X()) {
+                    if(positions[X][Y]) {
+                        result = true;
+                    }
+                }
+            }
+        }
     }
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

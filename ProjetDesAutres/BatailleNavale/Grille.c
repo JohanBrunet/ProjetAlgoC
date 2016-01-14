@@ -98,3 +98,7 @@ void createAllPositions(Grille g) {
         }
     }
 }
+
+int[][] getAllPositions(Grille g) {
+    return g->positions
+}
