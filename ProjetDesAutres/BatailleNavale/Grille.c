@@ -98,7 +98,7 @@ void createAllPositions(Grille g) {
         }
     }
 }
-
+// Renvoie le tableau de positions
 int[][] getAllPositions(Grille g) {
     return g->positions
 }
