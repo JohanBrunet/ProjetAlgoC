@@ -38,7 +38,13 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Bateau.h" />
+		<Unit filename="Bateaux.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Bateaux.h" />
+		<Unit filename="Grille.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Grille.h" />
 		<Unit filename="Joueur.c">
 			<Option compilerVar="CC" />

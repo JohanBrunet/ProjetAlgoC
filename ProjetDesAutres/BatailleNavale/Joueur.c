@@ -54,3 +54,18 @@ void setGrilleJoueur(Joueur j, Grille g) {
 Bateaux getGrilleJoueur(Joueur j) {
     return j->grille;
 }
+
+/* Renvoie true si le joueur a encore des bateaux non coulés */
+bool estEnVie(Joueur j) {
+    Bateaux listeBateaux = j->grille->bateaux->bateaux;
+    Grille g = getGrilleJoueur(j);
+    int i = nombreBateaux(listeBateaux);
+    int x;
+    Bateau b;
+    int compteur = 0;
+    int[][] positions;
+    for(x=0; x<i; x++) {
+        recupererBateau(listeBateaux, x);
+    }
+
+}
