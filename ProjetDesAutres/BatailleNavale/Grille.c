@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Grille.h"
+#include "Bateaux.h"
+#include "Bateau.h"
 
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */
@@ -23,7 +25,7 @@ int nbLigneGrille(Grille g){
 
 /* Renvoie vrai (1=vrai,0=faux) si la grille est vide (sans bateau) */
 int estVide(Grille g){
-	if (sizeof(g->bateaux) == 0) {
+	if (sizeof(g->bateaux->bateaux) == 0) {
 		return 1;
 	}
 	else {
@@ -43,21 +45,7 @@ int positionValide(Grille g,int x,int y){
 
 /* Renvoie vrai (1=vrai,0=faux) s'il y a un bateau qui occupe les coordonnées du tir */
 int positionOccupee(Grille g,int x,int y){
-	int i;
-	for (i = 0, i <= sizeof(g->bateaux), i++) {
-		int j;
-		for (j = g->bateaux[i].getCoord1X(), i <= g->bateaux[i].getCoord2X, j++) {
-			int k;
-			for (k = g->bateaux[i].getCoord1Y, i <= g->bateaux[i].getCoord2Y, k++) {
-				if (x == j && y == k) {
-					return 1;
-				}
-				else {
-					return 0;
-				}
-			}
-		}
-	}
+    return g->positions[x][y] == void;
 }
 
 /* Donne le joueur (caractérisé par son numéro) à qui appartient la grille de bateaux */
@@ -86,7 +74,7 @@ Bateau bateauSousTir(Grille g,int x,int y){
 }
 
 /* Supprime la position qui a été tirée de la grille et renvoie cette grille sans la position */
-Grille retirerPosition(Grille g,int x,int y){
+Grille ajouterPosition(Grille g,int x,int y){
 	if (positionValide(x,y) == 0) {
 		printf("%s\n", "Position non valide !");
 	}
@@ -94,6 +82,19 @@ Grille retirerPosition(Grille g,int x,int y){
 		printf("%s\n", "Position occupée !");
 	}
 	else {
-		g->positions[x][y] = NULL;
+		g->positions[x][y] = 0;
 	}
+}
+
+/* Ajoute toutes les positions */
+void createAllPositions(Grille g) {
+    int x = g->nbColonnes;
+    int y = g->nbLignes;
+    int cptX;
+    int cptY;
+    for(cptX=0;cptX<x;cptX++) {
+        for(cptY=0;cptY<y; cptY++) {
+            ajouterPosition(g, cptX, cptY)
+        }
+    }
 }

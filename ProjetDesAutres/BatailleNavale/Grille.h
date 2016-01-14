@@ -9,7 +9,7 @@
 typedef struct TGrille TGrille{
 	int nbColonnes;
 	int nbLignes;
-	Bateau[] bateaux;
+	Bateaux bateaux;
 	int[][] positions;
 	int[][] positionDejaVisee;
 	Joueur joueur;
@@ -44,7 +44,9 @@ int positionDejaVisee(int x,int y);
 Bateau bateauSousTir(Grille g,int x,int y);
 
 /* Supprime la position qui a été tirée de la grille et renvoie cette grille sans la position */
-Grille retirerPosition(Grille g,int x,int y);
+Grille ajouterPosition(Grille g,int x,int y);
 
+/* Ajoute toutes les positions */
+void createAllPositions(Grille g);
 #endif
 

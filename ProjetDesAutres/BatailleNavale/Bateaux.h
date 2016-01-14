@@ -24,4 +24,7 @@ int nombreBateaux(Bateaux bx);
 /* Cherche dans l'ensemble des Bateaux le bateau donné en paramètre (ses coordonnées) et le renvoie s'il appartient à l'ensemble sinon "ce bateau a été coulé" */
 Bateau recupererBateau(Bateaux bx,Bateau b);
 
+/* Renvoie le bateau d'indice x */
+Bateau getBateauFromNumber(Bateaux bx, int x);
+
 #endif

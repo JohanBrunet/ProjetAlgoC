@@ -40,6 +40,9 @@
 		<Unit filename="Bateau.h" />
 		<Unit filename="Bateaux.h" />
 		<Unit filename="Grille.h" />
+		<Unit filename="Joueur.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Joueur.h" />
 		<Unit filename="Partie.c">
 			<Option compilerVar="CC" />

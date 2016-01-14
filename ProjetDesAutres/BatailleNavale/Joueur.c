@@ -13,8 +13,8 @@ Joueur creerJoueur(int numJoueur) {
 }
 
 /* Renvoie l'ensemble des bateaux restantes du joueur  */
-Bateaux bateauxNonCoules(Joueur j) {
-    Bateaux listeBateaux = j->listeBateaux;
+Bateaux bateauxNonCoules(Joueur j, Grille g) {
+    Bateaux listeBateaux = j->grille->bateaux;
     int i = nombreBateaux(listeBateaux);
     int x;
     Bateau b;
@@ -22,7 +22,6 @@ Bateaux bateauxNonCoules(Joueur j) {
     int[] position;
     for(x=0; x<i; x++) {
         recupererBateau(listeBateaux, x);
-
     }
 }
 
@@ -38,12 +37,12 @@ void setNumJoueur(Joueur j, int numJoueur) {
 
 /* Définit les bateaux du joueur */
 void setBateauxJoueur(Joueur j, Bateaux listeBateaux) {
-    j->listeBateaux = listeBateaux;
+    j->grille->bateaux = listeBateaux;
 }
 
 /* Renvoie les bateaux du joueur */
 Bateaux getBateauxJoueur(Joueur j) {
-    return j->listeBateaux;
+    return j->grille->bateaux;
 }
 
 /* Définit la Grille du joueur */

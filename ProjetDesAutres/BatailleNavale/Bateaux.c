@@ -4,7 +4,7 @@
 
 /* Créer un ensemble de bateaux vide (sans bateaux, les bateaux ne sont pas encore placés)  */
 Bateaux creerBateaux() {
-	Bateaux bateaux;
+	Bateau[] bateaux;
 	return bateaux;
 }
 
@@ -29,4 +29,9 @@ int nombreBateaux(Bateaux bx) {
 Bateau recupererBateau(Bateaux bx, int indice) {
 	//TODO récuérer un bateau b dans la liste bx
 	return bx->bateaux[indice];
+}
+
+/* Renvoie le bateau d'indice x */
+Bateau getBateauFromNumber(Bateaux bx, int x) {
+    return bx->bateaux[x]
 }
