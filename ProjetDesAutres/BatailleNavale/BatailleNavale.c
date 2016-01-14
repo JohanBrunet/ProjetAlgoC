@@ -8,9 +8,9 @@
 #include "Resultat.h"
 
 /* ******************************************* */
-/*  Progamme de jeu de la bataille navale    */
-/*  Laure MARCHAL
-   Ana-Maria OPRESCU  */
+/*    Progamme de jeu de la bataille navale    */
+/*              Johan BRUNET                   */
+/*            Quentin BOUYGUES                 */
 /* ******************************************* */
 
 int LARGEUR_GRILLE = 20;
@@ -39,18 +39,15 @@ int main (void) {
     /* choix du premier joueur à placer ses bateaux */
     Joueur j;
     j = choisirPremierJoueur(p);
-    printf("Le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
-
     /* le premier joueur place ses bateaux */
+    printf("Le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
 
     /* l'autre joueur va maintenant placer ses bateaux */
     printf("le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
 
-    /* on démarre le jeu */
-        /* on choisit le premier joueur à tirer au hasard */
-    
+    /* on démarre le jeu */    
     j = activerJoueurSuivant(p, j);
-        /* boucle du jeu, le jeu s'arrete quand la partie est finie */
+    /* boucle du jeu, le jeu s'arrete quand la partie est finie */
     while (!(estFini(j1,j2))) {
         printf("Joueur %d à vous de tirer :\n",n);
         int x,y;
@@ -58,53 +55,57 @@ int main (void) {
         x = scanf("%d", x);
         printf("Veuillez entrer la colonne du tir : ");
         y = scanf("%d", y);
-            // Ajouter le tir
+        // Ajouter le tir
         Resultat res;
+        /* Si la position n'est pas valide o ne fait rien */
+        if (!positionValide(j->grille, x, y)) {
             /* si le joueur 1 tire */
-        if (getNumJoueur(j) == 1){
+            if (getNumJoueur(j) == 1){
                 /* s'il y a un bateau à la position */
-            if (positionOccupee(j->grille,x,y)){
-
-            }
+                if (positionOccupee(j->grille,x,y)) {
+                    //TODO si la position est occupée on fait les
+                    // verifs sur le bateau (touché, coulé, ...)
+                }
                 /* si le tir ne touche rien */
+                else {
+                    if(estEnVue(x,y)) {
+                        res = creerEnVue();
+                        return res;
+                    }
+                    else {
+                        res = creerLoupe();
+                        return res;
+                    }
+                }
+            }
+            /* si le joueur 2 tire */
             else {
-                if(estEnVue(x,y)) {
-                    res = creerEnVue();
+                if (positionOccupee(g1,x,y)) {
+                    Bateau b;
+                    b = bateauSousTir(g1,x,y);
+                    b = bateauTouche(b,x,y);
+                    res = coupAuBut(b,x,y);
                     return res;
+                    if (bateauVide(b)) {
+                        Resultat coule;
+                        coule = creerCoule();
+                        bx1 = supprimeBateau(b,bx1);
+                    }
                 }
                 else {
-                    res = creerLoupe();
-                    return res;
+                    if(estEnVue(x,y)) {
+                        res = creerEnVue();
+                        return res;
+                    }
+                    else {
+                        res = creerLoupe();
+                        return res;
+                    }
                 }
             }
+            /* On change de joueur */
+            j = activerJoueurSuivant(p, j)
         }
-        /* si le joueur 2 tire */
-        else {
-            if (positionOccupee(g1,x,y)) {
-                Bateau b;
-                b = bateauSousTir(g1,x,y);
-                b = bateauTouche(b,x,y);
-                res = coupAuBut(b,x,y);
-                return res;
-                if (bateauVide(b)) {
-                    Resultat coule;
-                    coule = creerCoule();
-                    bx1 = supprimeBateau(b,bx1);
-                }
-            }
-            else {
-                if(estEnVue(x,y)) {
-                    res = creerEnVue();
-                    return res;
-                }
-                else {
-                    res = creerLoupe();
-                    return res;
-                }
-            }
-        }
-        /* On change de joueur */
-        //TODO changement de joueur
     }
     /* Fin de la partie et affiche le résultat */
     printf("la partie est terminée");
@@ -116,4 +117,3 @@ int main (void) {
     }
     return EXIT_SUCCES;
 }
-
