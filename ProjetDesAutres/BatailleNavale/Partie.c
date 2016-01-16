@@ -56,4 +56,5 @@ Bateau bateauTouche(Bateau b,int x,int y);
 int estFini(Joueur j1,Joueur j2);
 
 /* Renvoie le joueur à qui il reste des bateaux, si l'autre n'en a plus */
-Joueur aGagne(Joueur j1,Joueur j2);
+Joueur aGagne(Joueur j1, Joueur j2);
+//TODO voir si il n'est pas plus logique de passer la partie en paramètre plutôt que les deux joueurs

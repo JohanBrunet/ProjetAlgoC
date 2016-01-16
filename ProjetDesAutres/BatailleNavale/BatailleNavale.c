@@ -108,12 +108,8 @@ int main (void) {
         }
     }
     /* Fin de la partie et affiche le résultat */
-    printf("la partie est terminée");
-    if (aGagne(p->j1, j2) == j1) {
-        printf("Bravo joueur %d ! vous avez gagné !",1);
-    }
-    else {
-        printf("Bravo joueur %d ! vous avez gagné !",2);
-    }
+    printf("Partie terminée !");
+    Joueur gagnant = aGagne(p->j1, p->j2);
+    printf("Bravo joueur %d, vous avez gagné !", getNumJoueur(gagnant));
     return EXIT_SUCCES;
 }

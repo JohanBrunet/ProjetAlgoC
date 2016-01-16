@@ -8,8 +8,8 @@
 Vérifie si les dimensions sont positives et au minimum 5x5 */
 Grille creerGrille(int largeur, int hauteur){
 	Grille grille;
-	grille -> nbColonnes = largeur;
-	grille -> nbLignes = hauteur;
+	grille->nbColonnes = largeur;
+	grille->nbLignes = hauteur;
 	return grille;
 }
 
@@ -34,7 +34,7 @@ int estVide(Grille g){
 }
 
 /* Renvoie vrai (1=vrai,0=faux) si la position du tir est bien dans la grille */
-int positionValide(Grille g,int x,int y){
+int positionValide(Grille g, int x, int y){
 	if ((x <= g->nbLignes) && (y <= g->nbColonnes)) {
 		return 1;
 	}
@@ -44,7 +44,7 @@ int positionValide(Grille g,int x,int y){
 }
 
 /* Renvoie vrai (1=vrai,0=faux) s'il y a un bateau qui occupe les coordonnées du tir */
-int positionOccupee(Grille g,int x,int y){
+int positionOccupee(Grille g, int x, int y){
     return g->positions[x][y] == void;
 }
 
@@ -54,7 +54,7 @@ Joueur grilleAppartient(Grille g){
 }
 
 /* Renvoie vrai (1=vrai,0=faux) si la position a déjà été tirée */
-int positionDejaVisee(Grille g, int x,int y){
+int positionDejaVisee(Grille g, int x, int y){
 	if (g->positionDejaVisee[x][y] != NULL) {
 		return 1;
 	}
@@ -64,21 +64,23 @@ int positionDejaVisee(Grille g, int x,int y){
 }
 
 /* Renvoie le bateau qui occupe la position du tir */
-Bateau bateauSousTir(Grille g,int x,int y){
-	if (positionOccupee(g,x,y) == 0) {
-		return NULL;
-	}
-	else {
-		//TODO
+Bateau bateauSousTir(Grille g, int x, int y){
+	if (positionValide(x,y)) {
+		if (!positionOccupee(g,x,y)) {
+			return NULL;
+		}
+		else {
+			//TODO
+		}
 	}
 }
 
 /* Supprime la position qui a été tirée de la grille et renvoie cette grille sans la position */
-Grille ajouterPosition(Grille g,int x,int y){
-	if (positionValide(x,y) == 0) {
+Grille ajouterPosition(Grille g, int x, int y){
+	if (!positionValide(x,y)) {
 		printf("%s\n", "Position non valide !");
 	}
-	else if (positionOccupee(x,y) == 1) {
+	else if (positionOccupee(x,y)) {
 		printf("%s\n", "Position occupée !");
 	}
 	else {

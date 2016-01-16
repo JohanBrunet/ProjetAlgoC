@@ -13,7 +13,7 @@ typedef struct TBateaux TBateaux {
 Bateaux creerBateaux();
 
 /* Ajoute à la suite un bateau (ensemble de coordonnées) dans l'ensemble des Bateaux */
-Bateaux ajouterBateau(Bateauxbx, Bateau b);
+Bateaux ajouterBateau(Bateaux bx, Bateau b);
 
 /* Supprime un bateau de l'ensemble des Bateaux si celui-ci est vide */
 Bateaux supprimerBateau(Bateaux bx, Bateau b);

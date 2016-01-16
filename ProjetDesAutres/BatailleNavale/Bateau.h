@@ -6,11 +6,11 @@
 
 /* Structure qui contient les positions d'un bateau (ses coordonnées) */
 typedef struct TBateau TBateau {
-    int taille;
-    int pos1X;
-    int pos1Y;
-    int pos2X;
-    int pos2Y;
+	int taille;
+	int pos1X;
+	int pos1Y;
+	int pos2X;
+	int pos2Y;
 }typedef TBateau* Bateau;
 
 /* Créer un bateau vide (sans coordonnées) qui n'est pas encore placé */
@@ -27,10 +27,12 @@ Vérifie la conformité des coordonnées */
 bool setCoord1(int x, int y);
 bool setCoord2(int x, int y);
 
+/* Obtenir la coordonnée du début du bateau */
 int getCoord1X(Bateau b);
-int getCoord1X(Bateau b);
-int getCoord2Y(Bateau b);
+int getCoord1Y(Bateau b);
+/* Obtenir la coordonnée de la fin du bateau */
 int getCoord2X(Bateau b);
+int getCoord2Y(Bateau b);
 
 #endif
 
