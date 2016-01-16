@@ -39,13 +39,13 @@ Joueur recupererJoueur(Partie partie, int i) {
 	}
 }
 
-/* Rend le joueur actif(celui qui est en train de tirer) */
-Joueur activerJoueurSuivant(Partie p, Joueur j) {
-	if (getNumJoueur(j) == 1) {
-		recupererJoueur(p, 2);
+/* Rend le joueur actif */
+Joueur activerJoueurSuivant(Partie partie, Joueur joueur) {
+	if (getNumJoueur(joueur) == 1) {
+		recupererJoueur(partie, 2);
 	}
 	else {
-		recupererJoueur(p, 2);
+		recupererJoueur(partie, 1);
 	}
 }
 

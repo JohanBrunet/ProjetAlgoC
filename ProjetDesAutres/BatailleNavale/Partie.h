@@ -16,13 +16,13 @@ typedef struct TPartie TPartie {
 Partie creerPartie();
 
 /* Renvoie le numéro d'un des deux joueurs au hasard  */
-int choisirPremierJoueur(Joueur j1,Joueur j2);
+int choisirPremierJoueur(Partie partie);
 
 /* Renvoie le joueur à l'aide de son numéro  */
-Joueur recupererJoueur(int i);
+Joueur recupererJoueur(Partie partie, int i);
 
-/* Rend le joueur actif(celui qui est en train de tirer) */
-Joueur activerJoueur(Joueur j);
+/* Rend le joueur actif */
+Joueur activerJoueurSuivant(Partie partie, Joueur j);
 
 /* Enleve la coordonnée touchée du Bateau et de la grille et renvoie ce bateau */
 Bateau bateauTouche(Bateau b,int x,int y);
