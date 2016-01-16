@@ -16,15 +16,12 @@ Bateaux creerBateaux();
 Bateaux ajouterBateau(Bateauxbx, Bateau b);
 
 /* Supprime un bateau de l'ensemble des Bateaux si celui-ci est vide */
-Bateaux supprimerBateau(Bateaux bx,Bateau b);
+Bateaux supprimerBateau(Bateaux bx, Bateau b);
 
 /* Renvoie le nombre de bateaux dans l'ensemble Bateaux (la taille de l'ensemble) */
 int nombreBateaux(Bateaux bx);
 
 /* Cherche dans l'ensemble des Bateaux le bateau donné en paramètre (ses coordonnées) et le renvoie s'il appartient à l'ensemble sinon "ce bateau a été coulé" */
-Bateau recupererBateau(Bateaux bx,Bateau b);
-
-/* Renvoie le bateau d'indice x */
-Bateau getBateauFromNumber(Bateaux bx, int x);
+Bateau recupererBateau(Bateaux bx, int indice);
 
 #endif

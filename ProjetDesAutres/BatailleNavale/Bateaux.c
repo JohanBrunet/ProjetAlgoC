@@ -4,7 +4,7 @@
 
 /* Créer un ensemble de bateaux vide (sans bateaux, les bateaux ne sont pas encore placés)  */
 Bateaux creerBateaux() {
-	Bateau[] bateaux;
+	Bateau[5] bateaux;
 	return bateaux;
 }
 
@@ -16,22 +16,35 @@ Bateaux ajouterBateau(Bateaux bx, Bateau b) {
 
 /* Supprime un bateau de l'ensemble des Bateaux si celui-ci est vide */
 Bateaux supprimerBateau(Bateaux bx, int indice) {
-	bx->bateaux[indice] = NULL;
+	/* On vérifie que l'indice donné correspond à une case du tableau */
+	if (indice < sizeof(bx)) {
+		bx->bateaux[indice] = NULL;
+	}
+	else {
+		printf("Indice hors du tableau !")
+	}
 	return bx;
 }
 
-/* Renvoie le nombre de bateaux dans l'ensemble Bateaux (la taille de l'ensemble) */
+/* Renvoie le nombre de bateaux dans l'ensemble Bateaux */
 int nombreBateaux(Bateaux bx) {
-	return sizeof(bx->bateaux);
+	int nbBateaux = 0;
+	for (i = 0, i < sizeof(bx), i++) {
+		if (bx[i] != NULL) {
+			nbBateaux++;
+		}
+	}
+	return nbBateaux;
 }
 
-/* Cherche dans l'ensemble des Bateaux le bateau donné en paramètre (ses coordonnées) et le renvoie s'il appartient à l'ensemble sinon "ce bateau a été coulé" */
+/* Cherche dans l'ensemble des Bateaux le bateau dont l'indice est passé en paramètre */
 Bateau recupererBateau(Bateaux bx, int indice) {
-	//TODO récuérer un bateau b dans la liste bx
+	/* On vérifie que l'indice donné correspond à une case du tableau */
+	if (indice < sizeof(bx)) {
+		bx->bateaux[indice] = NULL;
+	}
+	else {
+		printf("Indice hors du tableau !")
+	}
 	return bx->bateaux[indice];
-}
-
-/* Renvoie le bateau d'indice x */
-Bateau getBateauFromNumber(Bateaux bx, int x) {
-    return bx->bateaux[x]
 }
