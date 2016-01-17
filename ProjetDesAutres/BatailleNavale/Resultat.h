@@ -1,16 +1,18 @@
-#include <stdlib.h>
-#include <stdio.h>
 #ifndef RESULTAT_H
 #define RESULTAT_H
+
+#include <stdlib.h>
+#include <stdio.h>
 #include "Bateau.h"
 
 /* Structure qui permet d'afficher un résultat ("touché","coulé","en Vue","loupé") et de poursuivre le déroulement du jeu */
-typedef struct TResultat TResultat {
+typedef struct TResultat {
     int coule;
     int enVue;
     int touche;
     int loupe;
-}typedef TResultat* Resultat;
+} TResultat;
+typedef TResultat* Resultat;
 
 /* Créer le résultat "coulé" */
 Resultat creerCoule();

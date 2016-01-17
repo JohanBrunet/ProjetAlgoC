@@ -7,22 +7,36 @@ TBateau creerBateau() {
     return bateau;
 }
 
-Bateau bateauVide(Bateau b) {
-    return b == NULL;
+int bateauVide(Bateau b) {
+    int vide = 0;
+    if (tailleBateau(b) == 0) {
+        vide = 1;
+    }
+    return vide;
 }
 
 int tailleBateau(Bateau b) {
     return b.taille;
 }
 
-bool setCoordDebut(int x, int y) {
-    this.pos1X = x;
-    this.pos1Y = y;
+int setCoordDebut(Bateau b, int x, int y) {
+    int done = 0;
+    if (positionValide(x,y)) {
+        b->pos1X = x;
+        b->pos1Y = y;
+        done = 1;
+    }
+    return done;
 }
 
-bool setCoordFin(int x, int y) {
-    this.pos2X = x;
-    this.pos2Y = y;
+int setCoordFin(Bateau b, int x, int y) {
+    int done = 0;
+    if (positionValide(x,y)) {
+        b->pos2X = x;
+        b->pos2Y = y;
+        done = 1;
+    }
+    return done;
 }
 
 // A dégager ensuite
@@ -40,7 +54,7 @@ int getCoord1X(Bateau b) {
 int getCoord2Y(Bateau b) {
     return this.pos2X;
 }
-    
+
 int getCoord2X(Bateau b) {
     return this.pos2Y;
 }

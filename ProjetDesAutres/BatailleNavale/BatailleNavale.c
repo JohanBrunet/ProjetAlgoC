@@ -33,12 +33,12 @@ int main (void) {
     g1 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
     g2 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
 
-    setGrilleJoueur(recupererJoueur(p1), g1);
-    setGrilleJoueur(recupererJoueur(p2), g2);
+    setGrilleJoueur(recupererJoueur(partie,1), g1);
+    setGrilleJoueur(recupererJoueur(partie,2), g2);
 
     /* choix du premier joueur à placer ses bateaux */
     Joueur j;
-    j = choisirPremierJoueur(p);
+    j = choisirPremierJoueur(partie);
     /* le premier joueur place ses bateaux */
     printf("Le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
 
@@ -46,15 +46,15 @@ int main (void) {
     printf("le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
 
     /* on démarre le jeu */
-    j = activerJoueurSuivant(p, j);
+    j = activerJoueurSuivant(partie,j);
     /* boucle du jeu, le jeu s'arrete quand la partie est finie */
-    while (!(estFini(j1,j2))) {
-        printf("Joueur %d à vous de tirer :\n",n);
+    while (!(estFini(partie->joueur1,partie->joueur2))) {
+        printf("Joueur %d à vous de tirer :\n", getNumJoueur(j));
         int x,y;
         printf("Veuillez entrer la ligne du tir : ");
-        x = scanf("%d", x);
+        x = scanf("%d", &x);
         printf("Veuillez entrer la colonne du tir : ");
-        y = scanf("%d", y);
+        y = scanf("%d", &y);
         // Ajouter le tir
         Resultat res;
         /* Si la position n'est pas valide o ne fait rien */
@@ -62,7 +62,7 @@ int main (void) {
             /* si le joueur 1 tire */
             if (getNumJoueur(j) == 1){
                 /* s'il y a un bateau à la position */
-                if (positionOccupee(j->grille,x,y)) {
+                if (positionOccupee(j->grille, x, y)) {
                     //TODO si la position est occupée on fait les
                     // verifs sur le bateau (touché, coulé, ...)
                 }
@@ -89,7 +89,21 @@ int main (void) {
                     if (bateauVide(b)) {
                         Resultat coule;
                         coule = creerCoule();
-                        bx1 = supprimeBateau(b,bx1);
+                        int indice;
+                        if (b->taille == 1) {
+                            indice = 0;
+                        }
+                        else if (b->taille == 2) {
+                            indice = 1;
+                        }
+                        //TODO voir comment recoonaitre les deux bateaux de taille 3
+                        else if (b->taille == 3) {
+                            indice = 2;
+                        }
+                        else if (b->taille == 2) {
+                            indice = 4;
+                        }
+                        b = supprimerBateau(j->grille->bateaux, indice);
                     }
                 }
                 else {
@@ -104,12 +118,12 @@ int main (void) {
                 }
             }
             /* On change de joueur */
-            j = activerJoueurSuivant(p, j);
+            j = activerJoueurSuivant(partie, j);
         }
     }
     /* Fin de la partie et affiche le résultat */
     printf("Partie terminée !");
-    Joueur gagnant = aGagne(p->j1, p->j2);
+    Joueur gagnant = aGagne(partie->joueur1, partie->joueur2);
     printf("Bravo joueur %d, vous avez gagné !", getNumJoueur(gagnant));
     return 1;
 }

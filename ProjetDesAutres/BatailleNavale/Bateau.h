@@ -5,13 +5,14 @@
 #include "Resultat.h"
 
 /* Structure qui contient les positions d'un bateau (ses coordonnées) */
-typedef struct TBateau TBateau {
+typedef struct TBateau {
 	int taille;
 	int pos1X;
 	int pos1Y;
 	int pos2X;
 	int pos2Y;
-}typedef TBateau* Bateau;
+} TBateau;
+typedef TBateau* Bateau;
 
 /* Créer un bateau vide (sans coordonnées) qui n'est pas encore placé */
 Bateau creerBateau();
@@ -24,8 +25,8 @@ int tailleBateau(Bateau b);
 
 /* Définit les coordonnées des extrémités du bateau
 Vérifie la conformité des coordonnées */
-bool setCoord1(int x, int y);
-bool setCoord2(int x, int y);
+int setCoord1(Bateau b, int x, int y);
+int setCoord2(Bateau b, int x, int y);
 
 /* Obtenir la coordonnée du début du bateau */
 int getCoord1X(Bateau b);

@@ -5,9 +5,10 @@
 #include "Bateau.h"
 
 /* Structure qui définit un ensemble de bateaux */
-typedef struct TBateaux TBateaux {
-	Bateau[] bateaux;
-}typedef TBateaux* Bateaux;
+typedef struct TBateaux {
+	Bateau bateaux[5];
+} TBateaux;
+typedef TBateaux* Bateaux;
 
 /* Créer un ensemble de bateaux vide (sans bateaux, les bateaux ne sont pas encore placés)  */
 Bateaux creerBateaux();
@@ -16,7 +17,7 @@ Bateaux creerBateaux();
 Bateaux ajouterBateau(Bateaux bx, Bateau b);
 
 /* Supprime un bateau de l'ensemble des Bateaux si celui-ci est vide */
-Bateaux supprimerBateau(Bateaux bx, Bateau b);
+Bateaux supprimerBateau(Bateaux bx, int indice);
 
 /* Renvoie le nombre de bateaux dans l'ensemble Bateaux (la taille de l'ensemble) */
 int nombreBateaux(Bateaux bx);

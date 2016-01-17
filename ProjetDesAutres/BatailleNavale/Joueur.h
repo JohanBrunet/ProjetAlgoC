@@ -1,14 +1,17 @@
-#include <stdlib.h>
-#include <stdio.h>
 #ifndef JOUEUR_H
 #define JOUEUR_H
+
+#include <stdlib.h>
+#include <stdio.h>
+#include "Grille.h"
 #include "Bateaux.h"
 
 /* Structure du joueur qui contiendra un numéro et ses bateaux  */
-typedef struct TJoueur TJoueur {
+typedef struct TJoueur {
     int numeroJoueur;
     Grille grille;
-}typedef TJoueur* Joueur;
+} TJoueur;
+typedef TJoueur* Joueur;
 
 /* Créer un joueur vide (sans bateau) avec seulement son numéro  */
 Joueur creerJoueur(int numJoueur);
@@ -35,6 +38,6 @@ void setGrilleJoueur(Joueur j, Grille g);
 Bateaux getGrilleJoueur(Joueur j);
 
 /* Renvoie true si le joueur a encore des bateaux non coulés */
-bool estEnVie(Joueur j);
+int estEnVie(Joueur j);
 
 #endif
