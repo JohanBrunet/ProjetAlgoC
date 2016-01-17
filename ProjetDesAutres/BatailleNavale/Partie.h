@@ -24,9 +24,6 @@ Joueur recupererJoueur(Partie partie, int i);
 /* Rend le joueur actif */
 Joueur activerJoueurSuivant(Partie partie, Joueur j);
 
-/* Enleve la coordonnée touchée du Bateau et de la grille et renvoie ce bateau */
-Bateau bateauTouche(Bateau b,int x,int y);
-
 /* Renvoie vrai (en c 1 =vrai, 0=faux) si l'un des deux joueurs n'a plus de bateaux */
 int estFini(Joueur j1,Joueur j2);
 

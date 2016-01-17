@@ -121,7 +121,7 @@ Bateau bateauSousTir(Grille g, int x, int y) {
 	}
 }
 
-/* Supprime la position qui a été tirée de la grille et renvoie cette grille sans la position */
+/* Supprime la position qui a été tirée de la grille et renvoie la grille */
 Grille supprimerPosition(Grille g, int x, int y) {
 	if (!positionValide(x,y)) {
 		printf("%s\n", "Position non valide !");

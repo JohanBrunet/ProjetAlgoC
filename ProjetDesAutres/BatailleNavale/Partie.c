@@ -47,12 +47,25 @@ Joueur activerJoueurSuivant(Partie partie, Joueur joueur) {
 	}
 }
 
-/* Enleve la coordonnée touchée du Bateau et de la grille et renvoie ce bateau */
-Bateau bateauTouche(Bateau b,int x,int y);
-
 /* Renvoie vrai (en c 1 =vrai, 0=faux) si l'un des deux joueurs n'a plus de bateaux */
-int estFini(Joueur j1,Joueur j2);
+int estFini(Joueur j1,Joueur j2) {
+    if(!estEnVie(j1) || !estEnVie(j2)) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
 
 /* Renvoie le joueur à qui il reste des bateaux, si l'autre n'en a plus */
-Joueur aGagne(Joueur j1, Joueur j2);
-//TODO voir si il n'est pas plus logique de passer la partie en paramètre plutôt que les deux joueurs
+Joueur aGagne(Joueur j1, Joueur j2) {
+    if(estEnVie(j1) && !estEnVie(j2)) {
+        return j1;
+    }
+    else if(estEnVie(j2) && !estEnVie(j1)) {
+        return j2;
+    }
+    else {
+        return void;
+    }
+}
