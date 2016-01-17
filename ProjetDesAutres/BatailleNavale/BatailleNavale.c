@@ -33,8 +33,8 @@ int main (void) {
     g1 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
     g2 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
 
-    setGrilleJoueur(recupererJoueur(p,1), g1);
-    setGrilleJoueur(recupererJoueur(p,2), g2);
+    setGrilleJoueur(recupererJoueur(p1), g1);
+    setGrilleJoueur(recupererJoueur(p2), g2);
 
     /* choix du premier joueur à placer ses bateaux */
     Joueur j;
@@ -45,7 +45,7 @@ int main (void) {
     /* l'autre joueur va maintenant placer ses bateaux */
     printf("le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
 
-    /* on démarre le jeu */    
+    /* on démarre le jeu */
     j = activerJoueurSuivant(p, j);
     /* boucle du jeu, le jeu s'arrete quand la partie est finie */
     while (!(estFini(j1,j2))) {
@@ -104,12 +104,13 @@ int main (void) {
                 }
             }
             /* On change de joueur */
-            j = activerJoueurSuivant(p, j)
+            j = activerJoueurSuivant(p, j);
         }
     }
     /* Fin de la partie et affiche le résultat */
     printf("Partie terminée !");
     Joueur gagnant = aGagne(p->j1, p->j2);
     printf("Bravo joueur %d, vous avez gagné !", getNumJoueur(gagnant));
-    return EXIT_SUCCES;
+    return 1;
 }
+
