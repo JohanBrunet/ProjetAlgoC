@@ -10,7 +10,7 @@ Bateaux creerBateaux() {
 
 /* Ajoute à la suite un bateau (ensemble de coordonnées) dans l'ensemble des Bateaux */
 Bateaux ajouterBateau(Bateaux bx, Bateau b) {
-	//TODO ajouter un bateau b à la liste bx
+	bx->bateaux[] = b;
 	return bx;
 }
 
