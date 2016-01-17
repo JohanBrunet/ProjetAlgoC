@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Bateau.h"
+#include "resultat.h"
 
-TBateau creerBateau() {
+Bateau creerBateau() {
     Bateau bateau;
     return bateau;
 }
@@ -16,7 +17,7 @@ int bateauVide(Bateau b) {
 }
 
 int tailleBateau(Bateau b) {
-    return b.taille;
+    return b->taille;
 }
 
 int setCoordDebut(Bateau b, int x, int y) {
@@ -44,18 +45,18 @@ int setCoordFin(Bateau b, int x, int y) {
 Resultat coupAuBut(Bateau b, int x, int y);
 
 int getCoord1X(Bateau b) {
-    return this.pos1X;
+    return b->pos1X;
 }
 
-int getCoord1X(Bateau b) {
-    return this.pos1Y;
+int getCoord1Y(Bateau b) {
+    return b->pos1Y;
 }
 
 int getCoord2Y(Bateau b) {
-    return this.pos2X;
+    return b->pos2X;
 }
 
 int getCoord2X(Bateau b) {
-    return this.pos2Y;
+    return b->pos2Y;
 }
 

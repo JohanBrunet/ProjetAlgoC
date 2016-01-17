@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "Partie.h"
-#include "Joueur.h"
-#include "Bateaux.h"
 #include "Bateau.h"
+#include "Bateaux.h"
 #include "Grille.h"
+#include "Joueur.h"
+#include "Partie.h"
 #include "Resultat.h"
 
 /* ******************************************* */

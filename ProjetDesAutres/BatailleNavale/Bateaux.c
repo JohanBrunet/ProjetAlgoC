@@ -1,16 +1,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Bateaux.h"
-
+#include "Bateau.h"
 /* Créer un ensemble de bateaux vide (sans bateaux, les bateaux ne sont pas encore placés)  */
 Bateaux creerBateaux() {
-	Bateau[5] bateaux;
+	Bateaux bateaux;
 	return bateaux;
 }
 
 /* Ajoute à la suite un bateau (ensemble de coordonnées) dans l'ensemble des Bateaux */
-Bateaux ajouterBateau(Bateaux bx, Bateau b) {
-	bx->bateaux[] = b;
+Bateaux ajouterBateau(Bateaux bx, Bateau b, int position) {
+	bx->bateaux[position] = b;
 	return bx;
 }
 
@@ -21,7 +21,7 @@ Bateaux supprimerBateau(Bateaux bx, int indice) {
 		bx->bateaux[indice] = NULL;
 	}
 	else {
-		printf("Indice hors du tableau !")
+		printf("Indice hors du tableau !");
 	}
 	return bx;
 }
@@ -29,8 +29,9 @@ Bateaux supprimerBateau(Bateaux bx, int indice) {
 /* Renvoie le nombre de bateaux dans l'ensemble Bateaux */
 int nombreBateaux(Bateaux bx) {
 	int nbBateaux = 0;
-	for (i = 0, i < sizeof(bx), i++) {
-		if (bx[i] != NULL) {
+	int i;
+	for (i = 0; i < sizeof(bx); i++) {
+		if (bateauVide(bx[i])) {
 			nbBateaux++;
 		}
 	}
@@ -44,7 +45,7 @@ Bateau recupererBateau(Bateaux bx, int indice) {
 		bx->bateaux[indice] = NULL;
 	}
 	else {
-		printf("Indice hors du tableau !")
+		printf("Indice hors du tableau !");
 	}
 	return bx->bateaux[indice];
 }

@@ -2,7 +2,6 @@
 #include <stdio.h>
 #ifndef GRILLE_H
 #define GRILLE_H
-#include "Joueur.h"
 #include "Bateau.h"
 
 /* Structure qui permet de positionner les bateaux et vérifier le résultat d'un tir */
@@ -12,7 +11,6 @@ typedef struct TGrille {
 	Bateaux bateaux;
 	int positions[20][20];
 	int positionDejaVisee[20][20];
-	Joueur joueur;
 } TGrille;
 typedef TGrille* Grille;
 
@@ -35,9 +33,6 @@ int positionValide(Grille g,int x,int y);
 /* Renvoie vrai (1=vrai,0=faux) s'il y a un bateau qui occupe les coordonnées du tir */
 int positionOccupee(Grille g,int x,int y);
 
-/* Donne le joueur (caractérisé par son numéro) à qui appartient la grille de bateaux */
-Joueur grilleAppartient(Grille g);
-
 /* Renvoie vrai (1=vrai,0=faux) si la position a déjà été tirée */
 int positionDejaVisee(int x,int y);
 
@@ -54,7 +49,7 @@ Grille ajouterPosition(Grille g, int x, int y);
 void createAllPositions(Grille g);
 
 // Renvoie le tableau de positions
-int[][] getAllPositions(Grille g);
+int getAllPositions(Grille g);
 
 #endif
 

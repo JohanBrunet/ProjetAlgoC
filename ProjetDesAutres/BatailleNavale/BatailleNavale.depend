@@ -85,3 +85,51 @@
 	<stdio.h>
 	"Bateau.h"
 
+1453064202 source:c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\bataillenavale.c
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+	"Bateaux.h"
+	"Grille.h"
+	"Joueur.h"
+	"Partie.h"
+	"Resultat.h"
+
+1453064324 c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\bateau.h
+	<stdlib.h>
+	<stdio.h>
+
+1453065026 c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\bateaux.h
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+
+1453064377 c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\grille.h
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+
+1453063788 c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\joueur.h
+	<stdlib.h>
+	<stdio.h>
+	"Grille.h"
+	"Bateaux.h"
+
+1453061572 c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\partie.h
+	<stdlib.h>
+	<stdio.h>
+	"Grille.h"
+	"Bateau.h"
+	"Joueur.h"
+
+1453063216 c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\resultat.h
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+
+1453064592 source:c:\users\quentin bouygues\desktop\dev\projetalgoc\projetdesautres\bataillenavale\bateau.c
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+	"resultat.h"
+

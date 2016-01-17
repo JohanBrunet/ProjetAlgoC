@@ -1,10 +1,9 @@
-#ifndef JOUEUR_H
-#define JOUEUR_H
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "Grille.h"
 #include "Bateaux.h"
+#ifndef JOUEUR_H
+#define JOUEUR_H
 
 /* Structure du joueur qui contiendra un numéro et ses bateaux  */
 typedef struct TJoueur {

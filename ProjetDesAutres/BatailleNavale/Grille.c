@@ -50,11 +50,6 @@ int positionOccupee(Grille g, int x, int y) {
     return g->positions[x][y] == void;
 }
 
-/* Donne le joueur (caractérisé par son numéro) à qui appartient la grille de bateaux */
-Joueur grilleAppartient(Grille g) {
-	return g->joueur;
-}
-
 /* Renvoie vrai (1=vrai,0=faux) si la position a déjà été tirée */
 int positionDejaVisee(Grille g, int x, int y) {
 	if (g->positionDejaVisee[x][y] != NULL) {

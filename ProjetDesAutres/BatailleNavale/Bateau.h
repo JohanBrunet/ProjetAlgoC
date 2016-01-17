@@ -2,7 +2,6 @@
 #include <stdio.h>
 #ifndef BATEAU_H
 #define BATEAU_H
-#include "Resultat.h"
 
 /* Structure qui contient les positions d'un bateau (ses coordonnées) */
 typedef struct TBateau {
