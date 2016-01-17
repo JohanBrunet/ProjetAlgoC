@@ -3,6 +3,7 @@
 #include "Grille.h"
 #include "Bateaux.h"
 #include "Bateau.h"
+#include "Joueur.h"
 
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */
@@ -71,7 +72,51 @@ Bateau bateauSousTir(Grille g, int x, int y) {
 			return NULL;
 		}
 		else {
-			//TODO
+			bool result = false;
+            Bateaux listeBateaux = j->grille->bateaux->bateaux;
+            Grille g = getGrilleJoueur(j);
+            int i = nombreBateaux(listeBateaux);
+            int X;
+            int Y;
+            Bateau b;
+            for(x=0; x<i; x++) {
+                b = recupererBateau(listeBateaux, x);
+                if(b->getCoord1X() == b->getCoord2X() && b->getCoord1X==x) {
+                    if(b->getCoord1Y() == b->getCoord2Y() && b->getCoord1Y()==y) {
+                        return b;
+                    }
+                    else if(b->getCoord1Y() > b->getCoord2Y()) {
+                        for(Y=b->getCoord2Y(); Y<=b->getCoord1Y(); Y++) {
+                            if(y==Y) {
+                                return b;
+                            }
+                        }
+                    }
+                    else {
+                        for(Y=b->getCoord1Y();Y<=b->getCoord2Y();Y++) {
+                            if(y==Y) {
+                                return b;
+                            }
+                        }
+                    }
+                }
+                else if(b->getCord1Y() == b->getCoord2Y(){
+                    if(b->getCoord1X() > b->getCoord2X()) {
+                        for(X=b->getCoord2X();X<=b->getCoord1X()) {
+                            if(x==X && y = b->getCoord1Y()) {
+                                return b;
+                            }
+                        }
+                    }
+                    else {
+                        for(X=b->getCoord1X();X<=b->getCoord2X()) {
+                            if(x==X && y==b->getCoord1Y()) {
+                                return b;
+                            }
+                        }
+                    }
+                }
+            }
 		}
 	}
 }

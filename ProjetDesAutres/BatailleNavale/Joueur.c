@@ -88,7 +88,7 @@ bool estEnVie(Joueur j) {
                 }
             }
         }
-        else {
+        else if(b->getCord1Y() == b->getCoord2Y()){
             if(b->getCoord1X() > b->getCoord2X()) {
                 for(X=b->getCoord2X();X<=b->getCoord1X()) {
                     if(positions[X][Y]==0) {
