@@ -8,8 +8,6 @@
 Partie creerPartie() {
     Partie p;
     /* Création des deux joueurs */
-    Joueur j1;
-    Joueur j2;
     p->joueur1 = creerJoueur(1);
     p->joueur2 = creerJoueur(2);
     return p;

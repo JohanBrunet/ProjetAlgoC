@@ -44,9 +44,16 @@ int positionDejaVisee(int x,int y);
 Bateau bateauSousTir(Grille g,int x,int y);
 
 /* Supprime la position qui a été tirée de la grille et renvoie cette grille sans la position */
-Grille ajouterPosition(Grille g,int x,int y);
+Grille supprimerPosition(Grille g,int x,int y);
+
+/* Ajoute la position dans la grille et renvoie la grille */
+Grille ajouterPosition(Grille g, int x, int y);
 
 /* Ajoute toutes les positions */
 void createAllPositions(Grille g);
+
+// Renvoie le tableau de positions
+int[][] getAllPositions(Grille g);
+
 #endif
 
