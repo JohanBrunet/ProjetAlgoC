@@ -6,20 +6,10 @@
 Joueur creerJoueur(int numJoueur) {
     // affichage de debug
     printf("Creation du joueur numero %d !\n", numJoueur);
-<<<<<<< HEAD
     Joueur j = (Joueur) malloc(sizeof(Joueur));
     j->numeroJoueur = numJoueur;
     // affichage de debug
-=======
-    Joueur j = NULL;
-<<<<<<< HEAD
-    j->numeroJoueur = numJoueur;
-    printf("Joueur numéro %d créé !\n", numJoueur);
-=======
-    j->numeroJoueur = numJoueur;   // le bug est ici !
->>>>>>> origin/master
     printf("Joueur numero %d cree !\n", numJoueur);
->>>>>>> origin/master
     return j;
 }
 
