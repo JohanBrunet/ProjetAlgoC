@@ -5,28 +5,29 @@
 #include "Joueur.h"
 #include "Partie.h"
 
-/* Créer une partie vide  */
+/* CrÃ©er une partie vide  */
 Partie creerPartie() {
-    printf("Création de la partie !\n");
+    printf("Creation de la partie !\n");
     Partie p = NULL;
-    /* Création des deux joueurs */
+    /* CrÃ©ation des deux joueurs */
     p->joueur1 = creerJoueur(1);
     p->joueur2 = creerJoueur(2);
+    printf("Partie cree !");
     return p;
 }
 
-/* Renvoie le numéro d'un des deux joueurs au hasard  */
-int choisirPremierJoueur(Partie partie) {
+/* Renvoie un joueur au hasard  */
+Joueur choisirPremierJoueur(Partie partie) {
     float i = rand();
     if (i <= 0.5) {
-        return 1;
+        return partie->joueur1;
     }
     else {
-        return 2;
+        return partie->joueur2;
     }
 }
 
-/* Renvoie le joueur à l'aide de son numéro  */
+/* Renvoie le joueur Ã  l'aide de son numÃ©ro  */
 Joueur recupererJoueur(Partie partie, int i) {
 	Joueur joueur;
 	if (i == 1) {
@@ -63,7 +64,7 @@ int estFini(Joueur j1,Joueur j2) {
     }
 }
 
-/* Renvoie le joueur à qui il reste des bateaux, si l'autre n'en a plus */
+/* Renvoie le joueur Ã  qui il reste des bateaux, si l'autre n'en a plus */
 Joueur aGagne(Joueur j1, Joueur j2) {
     Joueur gagnant;
     if(estEnVie(j1) && !estEnVie(j2)) {

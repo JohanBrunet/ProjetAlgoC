@@ -37,7 +37,7 @@ int main (void) {
     setGrilleJoueur(recupererJoueur(partie,2), g2);
 
     /* choix du premier joueur à placer ses bateaux */
-    Joueur j;
+    Joueur j = NULL;
     j = choisirPremierJoueur(partie);
     /* le premier joueur place ses bateaux */
     printf("Le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));

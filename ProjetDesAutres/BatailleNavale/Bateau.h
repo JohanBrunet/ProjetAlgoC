@@ -6,11 +6,11 @@
 /* Structure qui contient les positions d'un bateau (ses coordonnées) */
 struct TBateau {
 	int taille;
+	int coule;
 	int pos1X;
 	int pos1Y;
 	int pos2X;
 	int pos2Y;
-	int coule;
 };
 typedef struct TBateau* Bateau;
 
