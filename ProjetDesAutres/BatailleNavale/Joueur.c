@@ -15,14 +15,16 @@ Joueur creerJoueur(int numJoueur) {
 /* Renvoie l'ensemble des bateaux restantes du joueur  */
 Bateaux bateauxNonCoules(Joueur j, Grille g) {
     Bateaux listeBateaux = j->grille->bateaux;
+    Bateaux bateauxRestants;
     int i = nombreBateaux(listeBateaux);
     int x;
-    Bateau b;
+    /* Bateau b;
     int compteur = 0;
-    int position;
+    int position; */
     for(x=0; x<i; x++) {
-        recupererBateau(listeBateaux, x);
+        bateauxRestants = recupererBateau(listeBateaux, x);
     }
+    return bateauxRestants;
 }
 
 /* Renvoie le numéro du joueur */
@@ -58,20 +60,19 @@ Bateaux getGrilleJoueur(Joueur j) {
 /* Renvoie true si le joueur a encore des bateaux non coulés */
 int estEnVie(Joueur j) {
     int result = 0;
-    Bateaux listeBateaux = j->grille->bateaux->bateaux;
     Grille g = getGrilleJoueur(j);
+    Bateaux listeBateaux = g->bateaux;
     int i = nombreBateaux(listeBateaux);
     int x;
     int X;
     int Y;
     Bateau b;
-    int compteur = 0;
     int (*positions)[20][20] = getAllPositions(j->grille);
     for(x=0; x<i; x++) {
         b = recupererBateau(listeBateaux, x);
         if(getCoord1X(b) == getCoord2X(b)) {
             if(getCoord1Y(b) == getCoord2Y(b) ) {
-                return (positions[getCoord1X(b)][getCoord1Y(b)]);
+                return (positions[getCoord1X(b)][getCoord1Y(b)]);  // pourquoi return position ?
             }
             else if(getCoord1Y(b) > getCoord2Y(b)) {
                 for(Y=getCoord2Y(b); Y<=getCoord1Y(b); Y++) {

@@ -5,10 +5,10 @@
 #include "Bateau.h"
 
 /* Structure qui définit un ensemble de bateaux */
-typedef struct TBateaux {
+struct TBateaux {
 	Bateau bateaux[5];
-} TBateaux;
-typedef TBateaux* Bateaux;
+};
+typedef struct TBateaux* Bateaux;
 
 /* Créer un ensemble de bateaux vide (sans bateaux, les bateaux ne sont pas encore placés)  */
 Bateaux creerBateaux();

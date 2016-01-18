@@ -5,7 +5,7 @@
 
 Bateau creerBateau() {
     Bateau bateau;
-    int coule = 0;
+    bateau->coule = 0;
     return bateau;
 }
 

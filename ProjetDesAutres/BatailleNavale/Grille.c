@@ -65,6 +65,8 @@ int positionDejaVisee(Grille g, int x, int y) {
 	}
 }
 
+// PROBLEME : cette fonction renvoie tjs b mais on ne le modifie jamais...
+
 /* Renvoie le bateau qui occupe la position du tir */
 Bateau bateauSousTir(Grille g, int x, int y) {
 	if (positionValide(g,x,y)) {
@@ -115,6 +117,7 @@ Bateau bateauSousTir(Grille g, int x, int y) {
                     }
                 }
             }
+            return b;
 		}
 	}
 }

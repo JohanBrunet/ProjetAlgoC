@@ -74,11 +74,9 @@ int main (void) {
                 else {
                     if(estEnVue(x,y, j->grille)) {
                         res = creerEnVue();
-                        return res;
                     }
                     else {
                         res = creerLoupe();
-                        return res;
                     }
                 }
             }
@@ -111,11 +109,9 @@ int main (void) {
                 else {
                     if(estEnVue(x,y, j->grille)) {
                         res = creerEnVue();
-                        return res;
                     }
                     else {
                         res = creerLoupe();
-                        return res;
                     }
                 }
             }

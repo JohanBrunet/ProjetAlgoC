@@ -7,11 +7,11 @@
 #include "Joueur.h"
 
 /* Structure qui permet le déroulement du jeu  */
-typedef struct TPartie {
+struct TPartie {
 	Joueur joueur1;
 	Joueur joueur2;
-} TPartie;
-typedef TPartie* Partie;
+};
+typedef struct TPartie* Partie;
 
 /* Créer une partie vide  */
 Partie creerPartie();

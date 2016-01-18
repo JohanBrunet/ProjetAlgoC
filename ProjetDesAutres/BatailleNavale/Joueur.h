@@ -6,11 +6,11 @@
 #define JOUEUR_H
 
 /* Structure du joueur qui contiendra un numéro et ses bateaux  */
-typedef struct TJoueur {
+struct TJoueur {
     int numeroJoueur;
     Grille grille;
-} TJoueur;
-typedef TJoueur* Joueur;
+};
+typedef struct TJoueur* Joueur;
 
 /* Créer un joueur vide (sans bateau) avec seulement son numéro  */
 Joueur creerJoueur(int numJoueur);

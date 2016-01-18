@@ -172,3 +172,90 @@
 	"Resultat.h"
 	"Bateau.h"
 
+1453110012 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bataillenavale.c
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+	"Bateaux.h"
+	"Grille.h"
+	"Joueur.h"
+	"Partie.h"
+	"Resultat.h"
+
+1453110100 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateau.h
+	<stdlib.h>
+	<stdio.h>
+
+1453110073 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateaux.h
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+
+1453110073 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\grille.h
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+	"Bateaux.h"
+
+1453110073 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\joueur.h
+	<stdlib.h>
+	<stdio.h>
+	"Grille.h"
+	"Bateaux.h"
+
+1453110073 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\partie.h
+	<stdlib.h>
+	<stdio.h>
+	"Grille.h"
+	"Bateau.h"
+	"Joueur.h"
+
+1453110073 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\resultat.h
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+	"Grille.h"
+	"Bateaux.h"
+
+1453110012 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateau.c
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+	"resultat.h"
+
+1453108969 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateaux.c
+	<stdlib.h>
+	<stdio.h>
+	"Bateaux.h"
+	"Bateau.h"
+
+1453111095 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\grille.c
+	<stdlib.h>
+	<stdio.h>
+	"Grille.h"
+	"Bateaux.h"
+	"Bateau.h"
+	"Joueur.h"
+
+1453108969 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\joueur.c
+	<stdlib.h>
+	<stdio.h>
+	"Joueur.h"
+	"Bateaux.h"
+	"Bateau.h"
+	"Grille.h"
+
+1453111031 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\partie.c
+	<stdlib.h>
+	<stdio.h>
+	"Grille.h"
+	"Bateau.h"
+	"Joueur.h"
+	"Partie.h"
+
+1453108969 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\resultat.c
+	<stdlib.h>
+	<stdio.h>
+	"Resultat.h"
+	"Bateau.h"
+
