@@ -7,7 +7,8 @@
 
 /* Créer une partie vide  */
 Partie creerPartie() {
-    Partie p;
+    printf("Création de la partie !\n");
+    Partie p = NULL;
     /* Création des deux joueurs */
     p->joueur1 = creerJoueur(1);
     p->joueur2 = creerJoueur(2);

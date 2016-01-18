@@ -13,7 +13,7 @@ Resultat creerCoule() {
 
 /* Créer le résultat "touché" */
 Resultat creerTouche() {
-    Resultat res;
+    Resultat res = NULL;
     res->touche = 1;
     return res;
 }

@@ -4,7 +4,7 @@
 #include "resultat.h"
 
 Bateau creerBateau() {
-    Bateau bateau;
+    Bateau bateau = NULL;
     bateau->coule = 0;
     return bateau;
 }
