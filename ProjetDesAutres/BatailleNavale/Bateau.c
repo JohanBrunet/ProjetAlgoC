@@ -1,10 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Bateau.h"
-#include "resultat.h"
 
 Bateau creerBateau() {
-    Bateau bateau = (Bateau) malloc(sizeof(Bateau));
+    Bateau bateau = (Bateau) malloc(sizeof(TBateau));
     return bateau;
 }
 

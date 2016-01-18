@@ -1,15 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "Grille.h"
-#include "Bateau.h"
-#include "Joueur.h"
 #include "Partie.h"
 
 /* Créer une partie vide  */
 Partie creerPartie() {
     // affichage de debug
     printf("Creation de la partie !\n");
-    Partie p = (Partie) malloc(sizeof(Partie));
+    Partie p = (Partie) malloc(sizeof(TPartie));
     /* Création des deux joueurs */
     p->joueur1 = creerJoueur(1);
     p->joueur2 = creerJoueur(2);

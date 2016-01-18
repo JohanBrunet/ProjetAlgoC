@@ -9,13 +9,13 @@
 
 
 /* Structure qui permet d'afficher un résultat ("touché","coulé","en Vue","loupé") et de poursuivre le déroulement du jeu */
-struct TResultat {
+typedef struct TResultat {
     int coule;
     int enVue;
     int touche;
     int loupe;
-};
-typedef struct TResultat* Resultat;
+} TResultat;
+typedef TResultat* Resultat;
 
 /* Créer le résultat "coulé" */
 Resultat creerCoule();

@@ -6,14 +6,14 @@
 #include "Bateaux.h"
 
 /* Structure qui permet de positionner les bateaux et vérifier le résultat d'un tir */
-struct TGrille {
+typedef struct TGrille {
 	int nbColonnes;
 	int nbLignes;
 	Bateaux bateaux;
 	int positions[20][20];
 	int positionDejaVisee[20][20];
-};
-typedef struct TGrille* Grille;
+} TGrille;
+typedef TGrille* Grille;
 
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */

@@ -174,7 +174,7 @@
 	"Resultat.h"
 	"Bateau.h"
 
-1453123947 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bataillenavale.c
+1453125147 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bataillenavale.c
 	<stdlib.h>
 	<stdio.h>
 	"Bateau.h"
@@ -184,79 +184,70 @@
 	"Partie.h"
 	"Resultat.h"
 
-1453121882 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateau.h
+1453124964 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateau.h
 	<stdlib.h>
 	<stdio.h>
 
-1453110073 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateaux.h
+1453125076 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateaux.h
 	<stdlib.h>
 	<stdio.h>
 	"Bateau.h"
 
-1453123947 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\grille.h
+1453125076 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\grille.h
 	<stdlib.h>
 	<stdio.h>
 	"Bateau.h"
 	"Bateaux.h"
 
-1453123947 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\joueur.h
+1453125076 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\joueur.h
 	<stdlib.h>
 	<stdio.h>
 	"Grille.h"
 	"Bateaux.h"
 
-1453121882 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\partie.h
-	<stdlib.h>
-	<stdio.h>
-	"Grille.h"
-	"Bateau.h"
-	"Joueur.h"
-
-1453110073 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\resultat.h
-	<stdlib.h>
-	<stdio.h>
-	"Bateau.h"
-	"Grille.h"
-	"Bateaux.h"
-
-1453123947 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateau.c
-	<stdlib.h>
-	<stdio.h>
-	"Bateau.h"
-	"resultat.h"
-
-1453123947 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateaux.c
-	<stdlib.h>
-	<stdio.h>
-	"Bateaux.h"
-	"Bateau.h"
-
-1453123947 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\grille.c
-	<stdlib.h>
-	<stdio.h>
-	"Grille.h"
-	"Bateaux.h"
-	"Bateau.h"
-	"Joueur.h"
-
-1453124188 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\joueur.c
-	<stdlib.h>
-	<stdio.h>
-	"Joueur.h"
-
-1453123947 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\partie.c
+1453125076 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\partie.h
 	<stdlib.h>
 	<stdio.h>
 	"Grille.h"
 	"Bateau.h"
 	"Joueur.h"
+
+1453125076 c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\resultat.h
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+	"Grille.h"
+	"Bateaux.h"
+
+1453124814 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateau.c
+	<stdlib.h>
+	<stdio.h>
+	"Bateau.h"
+
+1453124814 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\bateaux.c
+	<stdlib.h>
+	<stdio.h>
+	"Bateaux.h"
+
+1453124814 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\grille.c
+	<stdlib.h>
+	<stdio.h>
+	"Grille.h"
+
+1453124731 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\joueur.c
+	<stdlib.h>
+	<stdio.h>
+	"Joueur.h"
+
+1453124814 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\partie.c
+	<stdlib.h>
+	<stdio.h>
 	"Partie.h"
 
-1453123947 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\resultat.c
+1453124814 source:c:\users\johan brunet\documents\github\projetalgoc\projetdesautres\bataillenavale\resultat.c
 	<stdlib.h>
 	<stdio.h>
 	"Resultat.h"
-	"Bateau.h"
 
 1453121446 source:c:\users\quentin.bouygues\desktop\projetalgoc\projetdesautres\bataillenavale\bataillenavale.c
 	<stdlib.h>

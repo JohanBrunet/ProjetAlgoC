@@ -1,12 +1,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Resultat.h"
-#include "Bateau.h"
 
 
 /* Créer le résultat "coulé" */
 Resultat creerCoule() {
-    Resultat res = (Resultat) malloc(sizeof(Resultat));
+    Resultat res = (Resultat) malloc(sizeof(TResultat));
     res->coule = 1;
     return res;
 }

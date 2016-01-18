@@ -37,7 +37,7 @@ int main (void) {
     Joueur j;
     j = choisirPremierJoueur(partie);
     /* le premier joueur place ses bateaux */
-    printf("Le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
+    printf("\nLe joueur numero %d va commencer a placer ses bateaux", getNumJoueur(j));
 
     while (nombreBateaux(j->grille->bateaux) <5) {
         int x1, x2, y1, y2;

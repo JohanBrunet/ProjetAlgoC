@@ -6,7 +6,7 @@
 Joueur creerJoueur(int numJoueur) {
     // affichage de debug
     printf("Creation du joueur numero %d !\n", numJoueur);
-    Joueur j = (Joueur) malloc(sizeof(Joueur));
+    Joueur j = (Joueur) malloc(sizeof(TJoueur));
     j->numeroJoueur = numJoueur;
     // affichage de debug
     printf("Joueur numero %d cree !\n", numJoueur);

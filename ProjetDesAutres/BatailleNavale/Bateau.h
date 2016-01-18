@@ -4,15 +4,15 @@
 #define BATEAU_H
 
 /* Structure qui contient les positions d'un bateau (ses coordonnées) */
-struct TBateau {
+typedef struct TBateau {
 	int taille;
 	int coule;
 	int pos1X;
 	int pos1Y;
 	int pos2X;
 	int pos2Y;
-};
-typedef struct TBateau* Bateau;
+} TBateau;
+typedef TBateau* Bateau;
 
 /* Créer un bateau vide (sans coordonnées) qui n'est pas encore placé */
 Bateau creerBateau();

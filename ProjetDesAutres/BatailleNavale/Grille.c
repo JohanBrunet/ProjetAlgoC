@@ -1,16 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Grille.h"
-#include "Bateaux.h"
-#include "Bateau.h"
-#include "Joueur.h"
 
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */
 Grille creerGrille(int largeur, int hauteur) {
     // affichage de debug
     printf("Creation de la grille\n");
-	Grille grille = (Grille) malloc(sizeof(Grille));
+	Grille grille = (Grille) malloc(sizeof(TGrille));
 	grille->nbColonnes = largeur;
 	grille->nbLignes = hauteur;
 	// affichage de debug
