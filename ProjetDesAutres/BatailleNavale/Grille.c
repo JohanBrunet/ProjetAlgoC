@@ -164,3 +164,15 @@ void createAllPositions(Grille g) {
 int getAllPositions(Grille g) {
     return g->positions;
 }
+
+
+// Renvoie la position du bateau passé en parametre
+int getPosFromBateau(Grille g, Bateau b) {
+    Bateaux bx = g->bateaux;
+    int i;
+    for(i=0;i<5;i++) {
+        if(getCoord1X(bx->bateaux[i]) == getCoord1X(b)) {
+            return i;
+        }
+    }
+}

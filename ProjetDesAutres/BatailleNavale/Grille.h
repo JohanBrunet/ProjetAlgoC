@@ -52,5 +52,8 @@ void createAllPositions(Grille g);
 // Renvoie le tableau de positions
 int getAllPositions(Grille g);
 
+// Renvoie la position du bateau passé en parametre
+int getPosFromBateau(Grille g, Bateau b);
+
 #endif
 
