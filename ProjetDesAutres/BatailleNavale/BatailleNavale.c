@@ -191,6 +191,8 @@ int main (void) {
             if (getNumJoueur(j) == 1){
                 /* s'il y a un bateau à la position */
                 if (positionOccupee(j->grille, x, y)) {
+
+
                     //TODO si la position est occupée on fait les
                     // verifs sur le bateau (touché, coulé, ...)
                 }
@@ -220,11 +222,13 @@ int main (void) {
                         else if (b->taille == 2) {
                             indice = 1;
                         }
-                        //TODO voir comment recoonaitre les deux bateaux de taille 3
-                        else if (b->taille == 3) {
+                        else if (b->taille == 3 && getPosFromBateau(j->grille, b) == 2) {
                             indice = 2;
                         }
-                        else if (b->taille == 2) {
+                        else if (b->taille == 3 && getPosFromBateau(j->grille, b) == 3) {
+                            indice = 3;
+                        }
+                        else if (b->taille == 4) {
                             indice = 4;
                         }
                         b = supprimerBateau(j->grille->bateaux, indice);
