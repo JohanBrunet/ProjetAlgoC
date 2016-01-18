@@ -5,12 +5,12 @@
 #include "Bateau.h"
 #include "Grille.h"
 
-/* Créer un joueur vide (sans bateau) avec seulement son numéro  */
+/* CrÃ©er un joueur vide (sans bateau) avec seulement son numÃ©ro  */
 Joueur creerJoueur(int numJoueur) {
-    printf("Création du joueur numéro %d !\n", numJoueur);
+    printf("Creation du joueur numero %d !\n", numJoueur);
     Joueur j = NULL;
-    j->numeroJoueur = numJoueur;    // le bug est ici !
-    printf("Joueur numéro %d créé !\n", numJoueur);
+    j->numeroJoueur = numJoueur;   // le bug est ici !
+    printf("Joueur numero %d cree !\n", numJoueur);
     return j;
 }
 
@@ -29,17 +29,17 @@ Bateaux bateauxNonCoules(Joueur j, Grille g) {
     return bateauxRestants;
 }
 
-/* Renvoie le numéro du joueur */
+/* Renvoie le numÃ©ro du joueur */
 int getNumJoueur(Joueur j) {
     return j->numeroJoueur;
 }
 
-/* Définit le numéro du joueur */
+/* DÃ©finit le numÃ©ro du joueur */
 void setNumJoueur(Joueur j, int numJoueur) {
     j->numeroJoueur = numJoueur;
 }
 
-/* Définit les bateaux du joueur */
+/* DÃ©finit les bateaux du joueur */
 void setBateauxJoueur(Joueur j, Bateaux listeBateaux) {
     j->grille->bateaux = listeBateaux;
 }
@@ -49,7 +49,7 @@ Bateaux getBateauxJoueur(Joueur j) {
     return j->grille->bateaux;
 }
 
-/* Définit la Grille du joueur */
+/* DÃ©finit la Grille du joueur */
 void setGrilleJoueur(Joueur j, Grille g) {
     j->grille = g;
 }
@@ -59,7 +59,7 @@ Bateaux getGrilleJoueur(Joueur j) {
     return j->grille;
 }
 
-/* Renvoie true si le joueur a encore des bateaux non coulés */
+/* Renvoie true si le joueur a encore des bateaux non coulÃ©s */
 int estEnVie(Joueur j) {
     int result = 0;
     Grille g = getGrilleJoueur(j);

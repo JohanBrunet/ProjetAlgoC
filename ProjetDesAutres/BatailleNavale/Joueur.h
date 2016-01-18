@@ -10,7 +10,7 @@ struct TJoueur {
     int numeroJoueur;
     Grille grille;
 };
-typedef struct TJoueur* Joueur;
+typedef struct TJoueur *Joueur;
 
 /* Créer un joueur vide (sans bateau) avec seulement son numéro  */
 Joueur creerJoueur(int numJoueur);

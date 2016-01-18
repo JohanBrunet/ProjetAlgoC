@@ -11,13 +11,13 @@ struct TPartie {
 	Joueur joueur1;
 	Joueur joueur2;
 };
-typedef struct TPartie* Partie;
+typedef struct TPartie *Partie;
 
 /* Créer une partie vide  */
 Partie creerPartie();
 
-/* Renvoie le numéro d'un des deux joueurs au hasard  */
-int choisirPremierJoueur(Partie partie);
+/* Renvoie un joueur au hasard  */
+Joueur choisirPremierJoueur(Partie partie);
 
 /* Renvoie le joueur à l'aide de son numéro  */
 Joueur recupererJoueur(Partie partie, int i);
