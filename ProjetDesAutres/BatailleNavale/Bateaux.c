@@ -4,7 +4,7 @@
 #include "Bateau.h"
 /* Créer un ensemble de bateaux vide (sans bateaux, les bateaux ne sont pas encore placés)  */
 Bateaux creerBateaux() {
-	Bateaux bateaux = NULL;
+	Bateaux bateaux = (Bateaux) malloc(sizeof(Bateaux));
 	return bateaux;
 }
 

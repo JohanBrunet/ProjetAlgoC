@@ -8,10 +8,16 @@
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */
 Grille creerGrille(int largeur, int hauteur) {
-	Grille grille = NULL;
-	grille->nbColonnes = 20;
-	grille->nbLignes = 20;
-	createAllPositions(&grille);
+    // affichage de debug
+    printf("Creation de la grille\n");
+	Grille grille = (Grille) malloc(sizeof(Grille));
+	grille->nbColonnes = largeur;
+	grille->nbLignes = hauteur;
+	// affichage de debug
+	printf("Dimensions intialisees\n");
+	createAllPositions(grille);
+	// affichage de debug
+	printf("Grille cree\n");
 	return grille;
 }
 
@@ -148,16 +154,17 @@ Grille ajouterPosition(Grille g, int x, int y) {
 }
 
 /* Ajoute toutes les positions */
-void createAllPositions(Grille g) {
+Grille createAllPositions(Grille g) {
     int x = g->nbColonnes;
     int y = g->nbLignes;
     int cptX;
     int cptY;
     for(cptX=0; cptX < x; cptX++) {
         for(cptY=0; cptY < y; cptY++) {
-            ajouterPosition(g, cptX, cptY);
+            g = ajouterPosition(g, cptX, cptY);
         }
     }
+    return g;
 }
 
 // Renvoie le tableau de positions

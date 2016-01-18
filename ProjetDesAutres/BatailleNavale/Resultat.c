@@ -6,7 +6,7 @@
 
 /* Créer le résultat "coulé" */
 Resultat creerCoule() {
-    Resultat res;
+    Resultat res = (Resultat) malloc(sizeof(Resultat));
     res->coule = 1;
     return res;
 }

@@ -4,7 +4,7 @@
 #include "resultat.h"
 
 Bateau creerBateau() {
-    Bateau bateau = NULL;
+    Bateau bateau = (Bateau) malloc(sizeof(Bateau));
     return bateau;
 }
 

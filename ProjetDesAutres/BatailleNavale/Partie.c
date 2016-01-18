@@ -7,12 +7,14 @@
 
 /* Créer une partie vide  */
 Partie creerPartie() {
+    // affichage de debug
     printf("Creation de la partie !\n");
-    Partie p = NULL;
+    Partie p = (Partie) malloc(sizeof(Partie));
     /* Création des deux joueurs */
     p->joueur1 = creerJoueur(1);
     p->joueur2 = creerJoueur(2);
-    printf("Partie cree !");
+    // affichage de debug
+    printf("Partie cree !\n");
     return p;
 }
 

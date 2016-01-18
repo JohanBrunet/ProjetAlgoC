@@ -1,15 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Joueur.h"
-#include "Bateaux.h"
-#include "Bateau.h"
-#include "Grille.h"
 
 /* Créer un joueur vide (sans bateau) avec seulement son numéro  */
 Joueur creerJoueur(int numJoueur) {
+    // affichage de debug
     printf("Creation du joueur numero %d !\n", numJoueur);
-    Joueur j = NULL;
-    j->numeroJoueur = numJoueur;   // le bug est ici !
+    Joueur j = (Joueur) malloc(sizeof(Joueur));
+    j->numeroJoueur = numJoueur;
+    // affichage de debug
     printf("Joueur numero %d cree !\n", numJoueur);
     return j;
 }
@@ -55,7 +54,7 @@ void setGrilleJoueur(Joueur j, Grille g) {
 }
 
 /* Renvoie la Grille du joueur */
-Bateaux getGrilleJoueur(Joueur j) {
+Grille getGrilleJoueur(Joueur j) {
     return j->grille;
 }
 

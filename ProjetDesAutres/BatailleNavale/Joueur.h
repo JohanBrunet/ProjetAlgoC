@@ -34,7 +34,7 @@ Bateaux getBateauxJoueur(Joueur j);
 void setGrilleJoueur(Joueur j, Grille g);
 
 /* Renvoie la Grille du joueur */
-Bateaux getGrilleJoueur(Joueur j);
+Grille getGrilleJoueur(Joueur j);
 
 /* Renvoie true si le joueur a encore des bateaux non coulés */
 int estEnVie(Joueur j);

@@ -24,20 +24,17 @@ int main (void) {
     /* Création de la partie */
     Partie partie = creerPartie();
 
-    printf("debug 1");
     /* Création d'une grille par joueur */
     /* Grille du joueur 1 */
-    Grille g1;
+    Grille g1 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
     /* Grille du joueur 2 */
-    Grille g2;
-    g1 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
-    g2 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
+    Grille g2 = creerGrille(LARGEUR_GRILLE, HAUTEUR_GRILLE);
 
     setGrilleJoueur(recupererJoueur(partie,1), g1);
     setGrilleJoueur(recupererJoueur(partie,2), g2);
 
     /* choix du premier joueur à placer ses bateaux */
-    Joueur j = NULL;
+    Joueur j;
     j = choisirPremierJoueur(partie);
     /* le premier joueur place ses bateaux */
     printf("Le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));

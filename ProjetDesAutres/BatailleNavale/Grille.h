@@ -47,7 +47,7 @@ Grille supprimerPosition(Grille g,int x,int y);
 Grille ajouterPosition(Grille g, int x, int y);
 
 /* Ajoute toutes les positions */
-void createAllPositions(Grille g);
+Grille createAllPositions(Grille g);
 
 // Renvoie le tableau de positions
 int getAllPositions(Grille g);
