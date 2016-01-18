@@ -3,6 +3,7 @@
 #ifndef GRILLE_H
 #define GRILLE_H
 #include "Bateau.h"
+#include "Bateaux.h"
 
 /* Structure qui permet de positionner les bateaux et vérifier le résultat d'un tir */
 typedef struct TGrille {
@@ -34,7 +35,7 @@ int positionValide(Grille g,int x,int y);
 int positionOccupee(Grille g,int x,int y);
 
 /* Renvoie vrai (1=vrai,0=faux) si la position a déjà été tirée */
-int positionDejaVisee(int x,int y);
+int positionDejaVisee(Grille g, int x, int y);
 
 /* Renvoie le bateau qui occupe la position du tir */
 Bateau bateauSousTir(Grille g,int x,int y);

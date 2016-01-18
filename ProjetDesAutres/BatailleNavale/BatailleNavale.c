@@ -22,9 +22,9 @@ int main (void) {
     printf("\n");
 
     /* Création de la partie */
-    Partie partie;
-    partie = creerPartie();
+    Partie partie = creerPartie();
 
+    printf("debug 1");
     /* Création d'une grille par joueur */
     /* Grille du joueur 1 */
     Grille g1;
@@ -42,8 +42,12 @@ int main (void) {
     /* le premier joueur place ses bateaux */
     printf("Le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
 
+    // TODO placer les bateaux
+
     /* l'autre joueur va maintenant placer ses bateaux */
     printf("le joueur numéro %d va commencer à placer ses bateaux", getNumJoueur(j));
+
+    // TODO placer les bateaux
 
     /* on démarre le jeu */
     j = activerJoueurSuivant(partie,j);
@@ -68,7 +72,7 @@ int main (void) {
                 }
                 /* si le tir ne touche rien */
                 else {
-                    if(estEnVue(x,y)) {
+                    if(estEnVue(x,y, j->grille)) {
                         res = creerEnVue();
                         return res;
                     }
@@ -83,9 +87,7 @@ int main (void) {
                 if (positionOccupee(g1,x,y)) {
                     Bateau b;
                     b = bateauSousTir(g1,x,y);
-                    b = bateauTouche(b,x,y);
-                    res = coupAuBut(b,x,y);
-                    return res;
+                    g1 = supprimerPosition(g1,x,y);
                     if (bateauVide(b)) {
                         Resultat coule;
                         coule = creerCoule();
@@ -107,7 +109,7 @@ int main (void) {
                     }
                 }
                 else {
-                    if(estEnVue(x,y)) {
+                    if(estEnVue(x,y, j->grille)) {
                         res = creerEnVue();
                         return res;
                     }

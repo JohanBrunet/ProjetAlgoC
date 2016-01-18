@@ -10,6 +10,7 @@ typedef struct TBateau {
 	int pos1Y;
 	int pos2X;
 	int pos2Y;
+	int coule
 } TBateau;
 typedef TBateau* Bateau;
 

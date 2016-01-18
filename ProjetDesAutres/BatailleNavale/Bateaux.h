@@ -14,7 +14,7 @@ typedef TBateaux* Bateaux;
 Bateaux creerBateaux();
 
 /* Ajoute à la suite un bateau (ensemble de coordonnées) dans l'ensemble des Bateaux */
-Bateaux ajouterBateau(Bateaux bx, Bateau b);
+Bateaux ajouterBateau(Bateaux bx, Bateau b, int position);
 
 /* Supprime un bateau de l'ensemble des Bateaux si celui-ci est vide */
 Bateaux supprimerBateau(Bateaux bx, int indice);

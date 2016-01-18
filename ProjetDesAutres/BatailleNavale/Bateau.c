@@ -5,6 +5,7 @@
 
 Bateau creerBateau() {
     Bateau bateau;
+    int coule = 0;
     return bateau;
 }
 
@@ -22,27 +23,19 @@ int tailleBateau(Bateau b) {
 
 int setCoordDebut(Bateau b, int x, int y) {
     int done = 0;
-    if (positionValide(x,y)) {
         b->pos1X = x;
         b->pos1Y = y;
         done = 1;
-    }
     return done;
 }
 
 int setCoordFin(Bateau b, int x, int y) {
     int done = 0;
-    if (positionValide(x,y)) {
         b->pos2X = x;
         b->pos2Y = y;
         done = 1;
-    }
     return done;
 }
-
-// A dégager ensuite
-/* RIEN A FAIRE LA ! */
-Resultat coupAuBut(Bateau b, int x, int y);
 
 int getCoord1X(Bateau b) {
     return b->pos1X;

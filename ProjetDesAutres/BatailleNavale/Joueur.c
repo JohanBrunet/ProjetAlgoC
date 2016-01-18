@@ -9,7 +9,7 @@
 Joueur creerJoueur(int numJoueur) {
     Joueur j;
     j->numeroJoueur = numJoueur;
-    return joueur;
+    return j;
 }
 
 /* Renvoie l'ensemble des bateaux restantes du joueur  */
@@ -19,7 +19,7 @@ Bateaux bateauxNonCoules(Joueur j, Grille g) {
     int x;
     Bateau b;
     int compteur = 0;
-    int[] position;
+    int position;
     for(x=0; x<i; x++) {
         recupererBateau(listeBateaux, x);
     }
@@ -32,7 +32,7 @@ int getNumJoueur(Joueur j) {
 
 /* Définit le numéro du joueur */
 void setNumJoueur(Joueur j, int numJoueur) {
-    j->numeroJoueur = numjoueur;
+    j->numeroJoueur = numJoueur;
 }
 
 /* Définit les bateaux du joueur */
@@ -66,38 +66,38 @@ int estEnVie(Joueur j) {
     int Y;
     Bateau b;
     int compteur = 0;
-    int[][] positions = j->grille->getAllPositions();
+    int (*positions)[20][20] = getAllPositions(j->grille);
     for(x=0; x<i; x++) {
         b = recupererBateau(listeBateaux, x);
-        if(b->getCoord1X() == b->getCoord2X()) {
-            if(b->getCoord1Y() == b->getCoord2Y() ) {
-                return (positions[b->getCoord1X()][b->getCoord1Y()]);
+        if(getCoord1X(b) == getCoord2X(b)) {
+            if(getCoord1Y(b) == getCoord2Y(b) ) {
+                return (positions[getCoord1X(b)][getCoord1Y(b)]);
             }
-            else if(b->getCoord1Y() > b->getCoord2Y()) {
-                for(Y=b->getCoord2Y(); Y<=b->getCoord1Y(); Y++) {
+            else if(getCoord1Y(b) > getCoord2Y(b)) {
+                for(Y=getCoord2Y(b); Y<=getCoord1Y(b); Y++) {
                     if(positions[X][Y]==0) {
                         result = 1;
                     }
                 }
             }
             else {
-                for(Y=b->getCoord1Y();Y<=b->getCoord2Y();Y++) {
+                for(Y=getCoord1Y(b);Y<=getCoord2Y(b);Y++) {
                     if(positions[X][Y]==0) {
                         result = 1;
                     }
                 }
             }
         }
-        else if(b->getCord1Y() == b->getCoord2Y()){
-            if(b->getCoord1X() > b->getCoord2X()) {
-                for(X=b->getCoord2X();X<=b->getCoord1X()) {
+        else if(getCoord1Y(b) == getCoord2Y(b)){
+            if(getCoord1X(b) > getCoord2X(b)) {
+                for(X=getCoord2X(b);X<=getCoord1X(b); X++) {
                     if(positions[X][Y]==0) {
                         result = 1;
                     }
                 }
             }
             else {
-                for(X=b->getCoord1X();X<=b->getCoord2X()) {
+                for(X=getCoord1X(b);X<=getCoord2X(b); X++) {
                     if(positions[X][Y]) {
                         result = 1;
                     }
@@ -107,23 +107,6 @@ int estEnVie(Joueur j) {
     }
     return result;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -31,7 +31,7 @@ int nombreBateaux(Bateaux bx) {
 	int nbBateaux = 0;
 	int i;
 	for (i = 0; i < sizeof(bx); i++) {
-		if (bateauVide(bx[i])) {
+ 		if (bateauVide(recupererBateau(bx, i))) {
 			nbBateaux++;
 		}
 	}

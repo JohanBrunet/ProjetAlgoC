@@ -3,6 +3,7 @@
 #include "Grille.h"
 #include "Bateau.h"
 #include "Joueur.h"
+#include "Partie.h"
 
 /* Créer une partie vide  */
 Partie creerPartie() {
@@ -14,13 +15,13 @@ Partie creerPartie() {
 }
 
 /* Renvoie le numéro d'un des deux joueurs au hasard  */
-Joueur choisirPremierJoueur(Partie partie) {
+int choisirPremierJoueur(Partie partie) {
     float i = rand();
     if (i <= 0.5) {
-        return partie->joueur1;
+        return 1;
     }
     else {
-        return partie->joueur2;
+        return 2;
     }
 }
 
@@ -64,8 +65,5 @@ Joueur aGagne(Joueur j1, Joueur j2) {
     }
     else if(estEnVie(j2) && !estEnVie(j1)) {
         return j2;
-    }
-    else {
-        return void;
     }
 }

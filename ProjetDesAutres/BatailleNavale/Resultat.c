@@ -38,16 +38,19 @@ int estCoule(Bateau b) {
 }
 
 /* Renvoie vrai (1=vrai,0=faux) si une coordonnée d'un bateau se trouve sur la même colonne ou la même ligne que la position du tir sur la grille */
-int estEnVue(int x,int y) {
-    return this->enVue;
+int estEnVue(int x, int y, Grille g) {
+    return 1;
+    //TODO
 }
 
 /* Renvoie vrai (1=vrai,0=faux) si une coordonnée d'un bateau est touchée par le tir */
-int estTouche(Bateau b) {
-    return this->touche;
+int estTouche(int x, int y, Bateau b) {
+    return 1;
+    //TODO
 }
 
 /* Renvoie vrai (1=vrai,0=faux) si rien n'était à la position du tir ou autour(sur même ligne ou sur même colonne) */
-int estLoupe(Bateau b) {
-    return this->loupe;
+int estLoupe(int x, int y, Bateau b) {
+    return 1;
+    //TODO
 }

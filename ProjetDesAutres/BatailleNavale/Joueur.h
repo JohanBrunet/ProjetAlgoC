@@ -16,7 +16,7 @@ typedef TJoueur* Joueur;
 Joueur creerJoueur(int numJoueur);
 
 /* Renvoie l'ensemble des bateaux restantes du joueur  */
-Bateaux bateauxNonCoules(Joueur j);
+Bateaux bateauxNonCoules(Joueur j, Grille g);
 
 /* Renvoie le numéro du joueur */
 int getNumJoueur(Joueur j);

@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Bateau.h"
+#include "Grille.h"
+#include "Bateaux.h"
 #ifndef RESULTAT_H
 #define RESULTAT_H
 
@@ -31,12 +33,12 @@ Resultat creerLoupe();
 int estCoule(Bateau b);
 
 /* Renvoie vrai (1=vrai,0=faux) si une coordonnée d'un bateau se trouve sur la même colonne ou la même ligne que la position du tir sur la grille */
-int estEnVue(int x,int y);
+int estEnVue(int x, int y, Grille g);
 
 /* Renvoie vrai (1=vrai,0=faux) si une coordonnée d'un bateau est touchée par le tir */
-int estTouche(Bateau b);
+int estTouche(int x, int y, Bateau b);
 
 /* Renvoie vrai (1=vrai,0=faux) si rien n'était à la position du tir ou autour(sur même ligne ou sur même colonne) */
-int estLoupe(Bateau b);
+int estLoupe(int x, int y, Bateau b);
 
 #endif

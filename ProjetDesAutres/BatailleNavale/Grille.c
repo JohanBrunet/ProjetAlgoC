@@ -9,20 +9,20 @@
 Vérifie si les dimensions sont positives et au minimum 5x5 */
 Grille creerGrille(int largeur, int hauteur) {
 	Grille grille;
-	grille->nbColonnes = largeur;
-	grille->nbLignes = hauteur;
-	createAllPositions(g);
+	grille->nbColonnes = 20;
+	grille->nbLignes = 20;
+	createAllPositions(grille);
 	return grille;
 }
 
 /* Renvoie le nombre de colonnes de la grille */
 int nbColonneGrille(Grille g){
-	return g.nbColonnes;
+	return g->nbColonnes;
 }
 
 /* Renvoie le nombre de lignes de la grille */
 int nbLigneGrille(Grille g) {
-	return g.nbLignes;
+	return g->nbLignes;
 }
 
 /* Renvoie vrai (1=vrai,0=faux) si la grille est vide (sans bateau) */
@@ -47,7 +47,12 @@ int positionValide(Grille g, int x, int y) {
 
 /* Renvoie vrai (1=vrai,0=faux) s'il y a un bateau qui occupe les coordonnées du tir */
 int positionOccupee(Grille g, int x, int y) {
-    return g->positions[x][y] == void;
+    if(g->positions[x][y] == 0) {
+        return 0;
+    }
+    else {
+        return 1;
+    }
 }
 
 /* Renvoie vrai (1=vrai,0=faux) si la position a déjà été tirée */
@@ -62,50 +67,48 @@ int positionDejaVisee(Grille g, int x, int y) {
 
 /* Renvoie le bateau qui occupe la position du tir */
 Bateau bateauSousTir(Grille g, int x, int y) {
-	if (positionValide(x,y)) {
+	if (positionValide(g,x,y)) {
 		if (!positionOccupee(g,x,y)) {
 			return NULL;
 		}
 		else {
-			bool result = false;
-            Bateaux listeBateaux = j->grille->bateaux->bateaux;
-            Grille g = getGrilleJoueur(j);
+            Bateaux listeBateaux = g->bateaux->bateaux;
             int i = nombreBateaux(listeBateaux);
             int X;
             int Y;
             Bateau b;
             for(x=0; x<i; x++) {
                 b = recupererBateau(listeBateaux, x);
-                if(b->getCoord1X() == b->getCoord2X() && b->getCoord1X==x) {
-                    if(b->getCoord1Y() == b->getCoord2Y() && b->getCoord1Y()==y) {
+                if(getCoord1X(b) == getCoord2X(b) && getCoord1X(b)==x) {
+                    if(getCoord1Y(b) == getCoord2Y(b) && getCoord1Y(b)==y) {
                         return b;
                     }
-                    else if(b->getCoord1Y() > b->getCoord2Y()) {
-                        for(Y=b->getCoord2Y(); Y<=b->getCoord1Y(); Y++) {
+                    else if(getCoord1Y(b) > getCoord2Y(b)) {
+                        for(Y=getCoord2Y(b); Y<=getCoord1Y(b); Y++) {
                             if(y==Y) {
                                 return b;
                             }
                         }
                     }
                     else {
-                        for(Y=b->getCoord1Y();Y<=b->getCoord2Y();Y++) {
+                        for(Y=getCoord1Y(b);Y<=getCoord2Y(b);Y++) {
                             if(y==Y) {
                                 return b;
                             }
                         }
                     }
                 }
-                else if(b->getCord1Y() == b->getCoord2Y(){
-                    if(b->getCoord1X() > b->getCoord2X()) {
-                        for(X=b->getCoord2X();X<=b->getCoord1X()) {
-                            if(x==X && y = b->getCoord1Y()) {
+                else if(getCoord1Y(b) == getCoord2Y(b)){
+                    if(getCoord1X(b) > getCoord2X(b)) {
+                        for(X=getCoord2X(b);X<=getCoord1X(b);X++) {
+                            if(x==X && y==getCoord1Y(b)) {
                                 return b;
                             }
                         }
                     }
                     else {
-                        for(X=b->getCoord1X();X<=b->getCoord2X()) {
-                            if(x==X && y==b->getCoord1Y()) {
+                        for(X=getCoord1X(b);X<=getCoord2X(b); X++) {
+                            if(x==X && y==getCoord1Y(b)) {
                                 return b;
                             }
                         }
@@ -118,10 +121,10 @@ Bateau bateauSousTir(Grille g, int x, int y) {
 
 /* Supprime la position qui a été tirée de la grille et renvoie la grille */
 Grille supprimerPosition(Grille g, int x, int y) {
-	if (!positionValide(x,y)) {
+	if (!positionValide(g,x,y)) {
 		printf("%s\n", "Position non valide !");
 	}
-	else if (positionOccupee(x,y)) {
+	else if (positionOccupee(g,x,y)) {
 		printf("%s\n", "Position occupée !");
 	}
 	else {
@@ -132,7 +135,7 @@ Grille supprimerPosition(Grille g, int x, int y) {
 
 /* Ajoute la position dans la grille et renvoie la grille */
 Grille ajouterPosition(Grille g, int x, int y) {
-	if (!positionValide(x,y)) {
+	if (!positionValide(g,x,y)) {
 		printf("%s\n", "Position non valide !");
 	}
 	else {
@@ -149,12 +152,12 @@ void createAllPositions(Grille g) {
     int cptY;
     for(cptX=0; cptX < x; cptX++) {
         for(cptY=0; cptY < y; cptY++) {
-            ajouterPosition(g, cptX, cptY)
+            ajouterPosition(g, cptX, cptY);
         }
     }
 }
 
 // Renvoie le tableau de positions
-int[][] getAllPositions(Grille g) {
-    return g->positions
+int getAllPositions(Grille g) {
+    return g->positions;
 }
