@@ -8,7 +8,7 @@
 /* Créer un joueur vide (sans bateau) avec seulement son numéro  */
 Joueur creerJoueur(int numJoueur) {
     printf("Création du joueur numéro %d !\n", numJoueur);
-    Joueur j;
+    Joueur j = NULL;
     j->numeroJoueur = numJoueur;    // le bug est ici !
     printf("Joueur numéro %d créé !\n", numJoueur);
     return j;

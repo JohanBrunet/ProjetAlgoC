@@ -8,10 +8,10 @@
 /* Créer un grille vide (sans bateau) en spécifiant ses dimensions.
 Vérifie si les dimensions sont positives et au minimum 5x5 */
 Grille creerGrille(int largeur, int hauteur) {
-	Grille grille;
+	Grille grille = NULL;
 	grille->nbColonnes = 20;
 	grille->nbLignes = 20;
-	createAllPositions(grille);
+	createAllPositions(&grille);
 	return grille;
 }
 
