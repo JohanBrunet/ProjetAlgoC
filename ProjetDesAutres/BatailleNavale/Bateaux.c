@@ -31,7 +31,7 @@ int nombreBateaux(Bateaux bx) {
 	int nbBateaux = 0;
 	int i;
 	for (i = 0; i < sizeof(bx); i++) {
- 		if (bateauVide(recupererBateau(bx, i))) {
+ 		if (!bateauVide(recupererBateau(bx, i))) {
 			nbBateaux++;
 		}
 	}
@@ -42,7 +42,7 @@ int nombreBateaux(Bateaux bx) {
 Bateau recupererBateau(Bateaux bx, int indice) {
 	/* On vérifie que l'indice donné correspond à une case du tableau */
 	if (indice < sizeof(bx)) {
-		bx->bateaux[indice] = NULL;
+		return bx->bateaux[indice];
 	}
 	else {
 		printf("Indice hors du tableau !");

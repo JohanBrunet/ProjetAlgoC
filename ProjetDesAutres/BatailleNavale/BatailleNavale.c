@@ -37,9 +37,9 @@ int main (void) {
     Joueur j;
     j = choisirPremierJoueur(partie);
     /* le premier joueur place ses bateaux */
-    printf("\nLe joueur numero %d va commencer a placer ses bateaux", getNumJoueur(j));
+    printf("\nLe joueur numero %d va commencer a placer ses bateaux\n", getNumJoueur(j));
 
-    while (nombreBateaux(j->grille->bateaux) <5) {
+    while (nombreBateaux(j->grille->bateaux->bateaux) < 5) {
         int x1, x2, y1, y2;
         printf("Entrer l'abscisse du bateau de taille 1\n");
         x1 = scanf("%d", &x1);
