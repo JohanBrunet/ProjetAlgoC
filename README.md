@@ -1,5 +1,5 @@
 # ProjetAlgoC
-Projet d'algo de 5e semestre (Polyech' Montpellier)
+Projet d'algo de 5e semestre (Polytech Montpellier)
 
 ## ProjetDeNous
 Définition des fichiers headers (.h) et du fichier main.c pour une bataille navale (implémentée par la suite par un autre groupe).
